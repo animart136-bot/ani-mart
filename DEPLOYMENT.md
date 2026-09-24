@@ -19,7 +19,7 @@ production PHP dependencies locally before uploading:
 
 ```sh
 composer install --no-dev --prefer-dist
-composer dump-autoload --no-dev --optimize=false
+composer dump-autoload --no-dev
 ```
 
 Upload the project files into the domain's `htdocs` directory with an FTP
