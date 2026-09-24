@@ -31,7 +31,17 @@ class Controller
             $view .
             ".php";
 
-        require $path;
+        ob_start();
+
+        try {
+            require $path;
+            $markup = (string) ob_get_clean();
+        } catch (\Throwable $exception) {
+            ob_end_clean();
+            throw $exception;
+        }
+
+        echo normalize_app_markup($markup);
     }
 
     /*
