@@ -1,0 +1,31 @@
+/* Ani-Mart Home Page Styles
+   Page-specific styling for the home/landing page.
+   Inherits global variables and components from app.css.
+*/
+
+/* ===== Page: landing ===== */
+
+.feature-card {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-icon {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 25px;
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}

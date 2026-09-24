@@ -1,0 +1,4 @@
+# Run after installing this entry in the web host's scheduler.
+# It processes due retention deletions, retries transient failures, and removes
+# only unreferenced Cloudinary assets older than the 30-day safety window.
+30 2 * * * cd /Applications/XAMPP/xamppfiles/htdocs/ani-mart && /Applications/XAMPP/xamppfiles/bin/php tools/process-image-cleanup.php --execute --grace-days=30 --limit=100 >> storage/logs/image-cleanup.log 2>&1

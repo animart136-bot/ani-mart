@@ -1,0 +1,202 @@
+.farmer-complaints-page { background: #f5f8f5; }
+
+.farmer-complaints-shell {
+    --complaints-accent: #2f7d32;
+    --complaints-secondary: #a8d5a2;
+    --complaints-background: #f2f8f4;
+    --complaints-ink: #183c2a;
+    color: var(--complaints-ink);
+}
+
+.farmer-complaints-shell .farmer-complaints-hero {
+    min-height: 310px;
+    border-color: color-mix(in srgb, var(--complaints-secondary) 42%, transparent) !important;
+    background: linear-gradient(120deg, var(--complaints-ink) 0%, var(--complaints-accent) 68%, color-mix(in srgb, var(--complaints-accent) 76%, var(--complaints-secondary)) 100%) !important;
+    box-shadow: 0 18px 42px color-mix(in srgb, var(--complaints-accent) 22%, transparent) !important;
+}
+
+.farmer-complaints-hero .row,
+.farmer-complaints-hero-stats,
+.farmer-complaints-back-link { position: relative; z-index: 1; }
+
+.farmer-complaints-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    color: rgba(255, 255, 255, .86);
+    font-size: .86rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.farmer-complaints-back-link:hover { color: #fff; text-decoration: underline; }
+
+.farmer-complaints-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(8px);
+}
+.farmer-complaints-hero-stats > div { min-width: 0; padding: 18px 12px; text-align: center; }
+.farmer-complaints-hero-stats > div + div { border-left: 1px solid rgba(255, 255, 255, .18); }
+.farmer-complaints-hero-stats span,
+.farmer-complaints-hero-stats strong { display: block; color: #fff; }
+.farmer-complaints-hero-stats span { min-height: 2.5em; font-size: .7rem; line-height: 1.3; }
+.farmer-complaints-hero-stats strong { margin-top: 6px; font-size: 1.45rem; }
+
+.farmer-complaints-card {
+    overflow: hidden;
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid color-mix(in srgb, var(--complaints-accent) 17%, #dfe7df);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgba(24, 60, 42, .07);
+}
+
+.farmer-complaints-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.farmer-complaints-eyebrow { display: block; margin-bottom: 8px; color: var(--complaints-accent); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.farmer-complaints-heading h2 { margin: 0; color: var(--complaints-ink); font-size: clamp(1.45rem, 3vw, 1.9rem); font-weight: 800; }
+.farmer-complaints-heading p { margin: 7px 0 0; color: #68766d; font-size: .88rem; line-height: 1.55; }
+.farmer-complaints-count { flex: 0 0 auto; padding: 8px 14px; border-radius: 999px; background: var(--complaints-background); color: var(--complaints-accent); font-size: .78rem; font-weight: 750; }
+
+.farmer-complaints-table-wrap { overflow: hidden; border: 1px solid color-mix(in srgb, var(--complaints-accent) 14%, #dde5de); border-radius: 18px; }
+.farmer-complaints-table th { padding: 13px 15px; border-bottom-color: color-mix(in srgb, var(--complaints-accent) 14%, #dde5de); background: color-mix(in srgb, var(--complaints-background) 70%, #fff); color: #657269; font-size: .68rem; font-weight: 800; letter-spacing: .045em; text-transform: uppercase; white-space: nowrap; }
+.farmer-complaints-table td { padding: 15px; border-color: color-mix(in srgb, var(--complaints-accent) 11%, #e5eae6); color: var(--complaints-ink); font-size: .82rem; vertical-align: middle; }
+.farmer-complaints-table tbody tr:last-child td { border-bottom: 0; }
+.farmer-complaints-table tbody tr:hover { background: color-mix(in srgb, var(--complaints-background) 46%, #fff); }
+
+.farmer-complaints-shell .btn-outline-success { border-color: var(--complaints-accent); color: var(--complaints-accent); }
+.farmer-complaints-shell .btn-outline-success:hover,
+.farmer-complaints-shell .btn-outline-success:focus-visible,
+.farmer-complaints-shell .btn-success { border-color: var(--complaints-accent); background: var(--complaints-accent); color: #fff; }
+
+.farmer-complaints-empty { display: grid; justify-items: center; padding: clamp(44px, 8vw, 72px) 24px; border: 1px solid color-mix(in srgb, var(--complaints-accent) 14%, #dde5de); border-radius: 18px; background: color-mix(in srgb, var(--complaints-background) 58%, #fff); text-align: center; }
+.farmer-complaints-empty > span { display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; background: #fff; color: var(--complaints-accent); font-size: 1.55rem; }
+.farmer-complaints-empty h3 { margin: 16px 0 6px; color: var(--complaints-ink); font-size: 1.3rem; }
+.farmer-complaints-empty p { max-width: 520px; margin: 0 0 18px; color: #68766d; line-height: 1.55; }
+.farmer-complaints-shell :is(a, button, input, select, textarea, [tabindex]):focus-visible { outline: 3px solid var(--complaints-secondary); outline-offset: 3px; }
+
+@media (max-width: 767.98px) {
+    .farmer-complaints-shell { width: 100%; max-width: 100%; padding-right: 12px; padding-left: 12px; overflow-x: clip; }
+    .farmer-complaints-shell .farmer-complaints-hero { min-height: 0; padding: 32px 26px; }
+    .farmer-complaints-hero-stats { grid-template-columns: 1fr; }
+    .farmer-complaints-hero-stats > div { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; text-align: left; }
+    .farmer-complaints-hero-stats > div + div { border-top: 1px solid rgba(255, 255, 255, .18); border-left: 0; }
+    .farmer-complaints-hero-stats span { min-height: 0; }
+    .farmer-complaints-hero-stats strong { margin-top: 0; font-size: 1.15rem; }
+    .farmer-complaints-card { padding: 20px 16px; }
+    .farmer-complaints-heading { flex-direction: column; }
+    .farmer-complaints-table-wrap { overflow: visible; border: 0; }
+    .farmer-complaints-table,
+    .farmer-complaints-table tbody,
+    .farmer-complaints-table tr,
+    .farmer-complaints-table td { display: block; width: 100%; }
+    .farmer-complaints-table thead { display: none; }
+    .farmer-complaints-table tbody { display: grid; gap: 14px; }
+    .farmer-complaints-table tbody tr { overflow: hidden; padding: 10px 14px; border: 1px solid color-mix(in srgb, var(--complaints-accent) 16%, #dfe7df); border-radius: 16px; background: #fff; }
+    .farmer-complaints-table tbody td { display: grid; grid-template-columns: minmax(88px, .7fr) minmax(0, 1.3fr); gap: 12px; padding: 9px 0; border: 0; border-bottom: 1px solid #edf1ed; text-align: right; overflow-wrap: anywhere; }
+    .farmer-complaints-table tbody td:last-child { border-bottom: 0; }
+    .farmer-complaints-table tbody td::before { content: attr(data-label); color: #68766d; font-size: .7rem; font-weight: 800; letter-spacing: .03em; text-align: left; text-transform: uppercase; }
+    .farmer-complaints-table td .btn { justify-self: end; }
+}
+
+/* Farmer complaint detail */
+.farmer-complaint-detail-hero { min-height: 285px !important; }
+.farmer-complaint-hero-status {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 11px 17px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 999px;
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+.farmer-complaint-hero-status.bg-warning { color: #513c00; }
+
+.farmer-complaint-card {
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid color-mix(in srgb, var(--complaints-accent) 17%, #dfe7df);
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(24, 60, 42, .07);
+}
+.farmer-complaint-card-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+.farmer-complaint-card-heading h2 { margin: 0; color: var(--complaints-ink); font-size: clamp(1.25rem, 2.4vw, 1.55rem); font-weight: 800; }
+.farmer-complaint-card-heading p { margin: 7px 0 0; color: #68766d; font-size: .86rem; line-height: 1.5; }
+
+.farmer-complaint-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px; }
+.farmer-complaint-facts > div { min-width: 0; padding: 16px; border: 1px solid color-mix(in srgb, var(--complaints-accent) 14%, #e2e8e3); border-radius: 15px; background: color-mix(in srgb, var(--complaints-background) 58%, #fff); }
+.farmer-complaint-facts small,
+.farmer-complaint-facts strong { display: block; }
+.farmer-complaint-facts small { margin-bottom: 5px; color: #718078; font-size: .7rem; font-weight: 750; text-transform: uppercase; }
+.farmer-complaint-facts strong { color: var(--complaints-ink); font-size: .9rem; overflow-wrap: anywhere; }
+
+.farmer-complaint-section { padding: 26px 0; border-top: 1px solid color-mix(in srgb, var(--complaints-accent) 13%, #e5eae6); }
+.farmer-complaint-section:last-child { padding-bottom: 0; }
+.farmer-complaint-section h3 { margin: 0 0 11px; color: var(--complaints-ink); font-size: 1.05rem; font-weight: 800; }
+.farmer-complaint-section > p { margin: 0; color: #5f6e64; line-height: 1.7; overflow-wrap: anywhere; }
+.farmer-complaint-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 15px; }
+.farmer-complaint-section-heading h3 { margin: 0; }
+.farmer-complaint-section-heading > span { color: #718078; font-size: .75rem; font-weight: 700; }
+.farmer-complaint-admin-note { margin-top: 2px; padding: 20px; border: 1px solid #ead8a6; border-radius: 16px; background: #fff9e9; }
+.farmer-complaint-admin-note h3 { display: flex; align-items: center; gap: 8px; color: #705300; }
+
+.farmer-complaint-evidence { overflow: hidden; height: 100%; margin: 0; border: 1px solid color-mix(in srgb, var(--complaints-accent) 14%, #e2e8e3); border-radius: 16px; background: #fff; }
+.farmer-complaint-evidence img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; cursor: zoom-in; }
+.farmer-complaint-evidence figcaption { padding: 11px 13px; color: #718078; font-size: .73rem; }
+
+.farmer-complaint-replies { display: grid; gap: 14px; }
+.farmer-complaint-reply { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 13px; padding: 17px; border: 1px solid color-mix(in srgb, var(--complaints-accent) 13%, #e4e9e5); border-radius: 16px; background: #fbfcfb; }
+.farmer-complaint-reply-avatar { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--complaints-background); color: var(--complaints-accent); font-weight: 800; }
+.farmer-complaint-reply header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.farmer-complaint-reply header strong,
+.farmer-complaint-reply header span { display: block; }
+.farmer-complaint-reply header strong { color: var(--complaints-ink); font-size: .88rem; }
+.farmer-complaint-reply header span,
+.farmer-complaint-reply time { color: #718078; font-size: .7rem; }
+.farmer-complaint-reply p { margin: 10px 0 0; color: #5f6e64; font-size: .86rem; line-height: 1.6; overflow-wrap: anywhere; }
+.farmer-complaint-no-replies { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 16px; background: var(--complaints-background); color: var(--complaints-accent); }
+.farmer-complaint-no-replies > i { font-size: 1.35rem; }
+.farmer-complaint-no-replies strong,
+.farmer-complaint-no-replies span { display: block; }
+.farmer-complaint-no-replies span { margin-top: 3px; color: #68766d; font-size: .8rem; }
+
+.farmer-complaint-response-card textarea { min-height: 132px; padding: 14px 16px; border-color: color-mix(in srgb, var(--complaints-accent) 20%, #dce4dd); border-radius: 14px; resize: vertical; }
+.farmer-complaint-response-card textarea:focus { border-color: var(--complaints-accent); box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--complaints-accent) 17%, transparent); }
+.farmer-complaint-response-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 15px; }
+.farmer-complaint-response-footer small { color: #718078; }
+
+.farmer-complaint-sidebar { align-self: flex-start; }
+.farmer-complaint-sidebar-heading { margin-bottom: 18px; }
+.farmer-complaint-summary-list { margin: 0; }
+.farmer-complaint-summary-list > div { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 1px solid #edf1ed; }
+.farmer-complaint-summary-list > div:first-child { padding-top: 0; }
+.farmer-complaint-summary-list > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.farmer-complaint-summary-list dt { color: #718078; font-size: .76rem; font-weight: 650; }
+.farmer-complaint-summary-list dd { margin: 0; color: var(--complaints-ink); font-size: .8rem; font-weight: 750; text-align: right; overflow-wrap: anywhere; }
+.farmer-complaint-next-steps ul { display: grid; gap: 15px; margin: 0; padding: 0; list-style: none; }
+.farmer-complaint-next-steps li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; color: #5f6e64; font-size: .82rem; line-height: 1.55; }
+.farmer-complaint-next-steps li i { margin-top: 2px; color: var(--complaints-accent); }
+
+@media (min-width: 992px) {
+    .farmer-complaint-sidebar { position: sticky; top: 96px; }
+}
+
+@media (max-width: 767.98px) {
+    .farmer-complaint-detail-hero { min-height: 0 !important; }
+    .farmer-complaint-hero-status { width: 100%; justify-content: center; }
+    .farmer-complaint-card-heading,
+    .farmer-complaint-response-footer { align-items: stretch; flex-direction: column; }
+    .farmer-complaint-facts { grid-template-columns: 1fr; }
+    .farmer-complaint-reply header { flex-direction: column; gap: 4px; }
+    .farmer-complaint-response-footer .btn { width: 100%; }
+}

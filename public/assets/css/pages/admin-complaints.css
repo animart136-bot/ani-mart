@@ -1,0 +1,447 @@
+/* Complaint administration extends the shared Ani-Mart app.css theme. */
+
+body.admin-complaints-page {
+    color: var(--text);
+    background:
+        radial-gradient(circle at 92% 3%, color-mix(in srgb, var(--primary-light) 13%, transparent), transparent 25rem),
+        var(--bg);
+}
+
+.admin-complaints-shell {
+    max-width: 1420px;
+}
+
+.complaints-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    min-height: 255px;
+    overflow: hidden;
+    padding: clamp(1.5rem, 4vw, 2.8rem);
+    border: 1px solid color-mix(in srgb, var(--primary-light) 32%, var(--primary-dark));
+    border-radius: var(--radius-detail);
+    color: var(--surface);
+    background:
+        radial-gradient(circle at 89% 7%, color-mix(in srgb, var(--surface) 16%, transparent), transparent 17rem),
+        radial-gradient(circle at 3% 115%, color-mix(in srgb, var(--secondary) 42%, transparent), transparent 20rem),
+        linear-gradient(120deg, var(--primary-dark), var(--primary) 64%, var(--secondary));
+    box-shadow: 0 22px 52px color-mix(in srgb, var(--primary-dark) 23%, transparent);
+}
+
+.complaints-hero-copy,
+.complaints-hero-stats {
+    position: relative;
+    z-index: 1;
+}
+
+.complaints-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .48rem .78rem;
+    border: 1px solid color-mix(in srgb, var(--surface) 24%, transparent);
+    border-radius: 999px;
+    color: color-mix(in srgb, var(--surface) 86%, var(--primary-light));
+    background: color-mix(in srgb, var(--surface) 11%, transparent);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.complaints-hero h1 {
+    margin: .9rem 0 .65rem;
+    color: var(--surface);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1.06;
+}
+
+.complaints-hero-copy > p {
+    max-width: 700px;
+    margin: 0;
+    color: color-mix(in srgb, var(--surface) 82%, var(--primary-light));
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.complaints-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.15rem;
+    padding: .65rem .95rem;
+    border: 1px solid color-mix(in srgb, var(--surface) 32%, transparent);
+    border-radius: var(--control-radius);
+    color: var(--surface);
+    background: color-mix(in srgb, var(--surface) 11%, transparent);
+    font-size: .84rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.complaints-back-link:hover {
+    color: var(--primary-dark);
+    background: var(--surface);
+    transform: translateY(-1px);
+}
+
+.complaints-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--surface) 27%, transparent);
+    border-radius: var(--radius-xl);
+    background: color-mix(in srgb, var(--surface) 13%, transparent);
+    box-shadow: inset 0 1px color-mix(in srgb, var(--surface) 18%, transparent);
+    backdrop-filter: blur(10px);
+}
+
+.complaints-hero-stats > div {
+    min-width: 0;
+    padding: 1.2rem .9rem;
+    text-align: center;
+}
+
+.complaints-hero-stats > div + div {
+    border-left: 1px solid color-mix(in srgb, var(--surface) 18%, transparent);
+}
+
+.complaints-hero-stats span,
+.complaints-hero-stats strong {
+    display: block;
+}
+
+.complaints-hero-stats span {
+    min-height: 2.5em;
+    color: color-mix(in srgb, var(--surface) 76%, var(--primary-light));
+    font-size: .76rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.complaints-hero-stats strong {
+    margin-top: .35rem;
+    color: var(--surface);
+    font-size: clamp(1.65rem, 4vw, 2.4rem);
+    line-height: 1;
+}
+
+.complaints-filter-panel,
+.complaints-table-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.complaints-filter-panel {
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+}
+
+.complaints-section-heading,
+.complaints-results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.complaints-section-heading {
+    margin-bottom: 1rem;
+}
+
+.complaints-section-heading span,
+.complaints-results-heading > div > span {
+    color: var(--primary);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.complaints-section-heading h2,
+.complaints-results-heading h2 {
+    margin: .1rem 0 0;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.complaints-clear-link {
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.complaints-clear-link:hover {
+    color: var(--primary);
+}
+
+.complaints-filter-grid {
+    display: grid;
+    grid-template-columns: minmax(230px, 1.6fr) repeat(3, minmax(145px, .8fr)) auto;
+    align-items: end;
+    gap: .85rem;
+}
+
+.complaints-filter-grid label {
+    display: block;
+    margin-bottom: .4rem;
+    color: var(--text);
+    font-size: .82rem;
+    font-weight: 750;
+}
+
+.complaints-filter-grid .form-control,
+.complaints-filter-grid .form-select {
+    min-height: 44px;
+    border-color: var(--border);
+    border-radius: var(--control-radius);
+    color: var(--text);
+    background-color: var(--surface);
+}
+
+.complaints-input-wrap {
+    position: relative;
+}
+
+.complaints-input-wrap i {
+    position: absolute;
+    top: 50%;
+    left: .85rem;
+    z-index: 1;
+    color: var(--muted);
+    transform: translateY(-50%);
+}
+
+.complaints-input-wrap .form-control {
+    padding-left: 2.5rem;
+}
+
+.complaints-filter-button,
+.complaints-review-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    border-color: var(--primary);
+    color: var(--surface);
+    background: var(--primary);
+    font-weight: 750;
+}
+
+.complaints-filter-button {
+    min-height: 44px;
+    padding-inline: 1.15rem;
+    border-radius: var(--control-radius);
+    white-space: nowrap;
+}
+
+.complaints-filter-button:hover,
+.complaints-review-button:hover {
+    border-color: var(--primary-dark);
+    color: var(--surface);
+    background: var(--primary-dark);
+}
+
+.complaints-table-card {
+    overflow: hidden;
+}
+
+.complaints-results-heading {
+    padding: 1.25rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.complaints-result-count {
+    padding: .42rem .72rem;
+    border-radius: 999px;
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.complaints-table-wrap {
+    margin: 0;
+}
+
+.complaints-table-card .table {
+    --bs-table-bg: var(--surface);
+    --bs-table-color: var(--text);
+    --bs-table-border-color: var(--border);
+    min-width: 1050px;
+    margin: 0;
+}
+
+.complaints-table-card .table th {
+    padding: .9rem 1rem;
+    border-bottom-width: 1px;
+    color: var(--muted);
+    background: var(--surface-soft);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.complaints-table-card .table td {
+    padding: 1rem;
+    vertical-align: middle;
+    font-size: .88rem;
+}
+
+.complaints-table-card .table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.complaints-table-card .table tbody tr:hover td {
+    background: color-mix(in srgb, var(--primary-light) 6%, var(--surface));
+}
+
+.complaints-status-badge,
+.complaints-priority {
+    padding: .43rem .68rem;
+    font-size: .74rem;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.complaints-priority {
+    display: inline-flex;
+    border-radius: 999px;
+    color: var(--muted);
+    background: var(--surface-soft);
+}
+
+.complaints-priority-high {
+    color: #b42318;
+    background: #fef3f2;
+}
+
+.complaints-priority-medium {
+    color: color-mix(in srgb, var(--secondary) 75%, var(--text));
+    background: color-mix(in srgb, var(--secondary) 13%, var(--surface));
+}
+
+.complaints-priority-low {
+    color: var(--primary-dark);
+    background: color-mix(in srgb, var(--primary-light) 13%, var(--surface));
+}
+
+.complaints-review-button {
+    border-radius: 999px;
+    padding: .42rem .72rem;
+    white-space: nowrap;
+}
+
+.complaints-empty-state {
+    padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+}
+
+.complaints-empty-state > span {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+    font-size: 1.65rem;
+}
+
+.complaints-empty-state h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+@media (max-width: 1199.98px) {
+    .complaints-filter-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .complaints-search-field {
+        grid-column: span 2;
+    }
+
+    .complaints-filter-button {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .complaints-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .complaints-hero-stats {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .complaints-hero {
+        min-height: 0;
+        border-radius: var(--radius-xl);
+    }
+
+    .complaints-filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .complaints-search-field,
+    .complaints-filter-button {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .complaints-hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .complaints-hero-stats > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .9rem 1rem;
+        text-align: left;
+    }
+
+    .complaints-hero-stats > div + div {
+        border-top: 1px solid color-mix(in srgb, var(--surface) 18%, transparent);
+        border-left: 0;
+    }
+
+    .complaints-hero-stats span {
+        min-height: 0;
+    }
+
+    .complaints-hero-stats strong {
+        margin-top: 0;
+        font-size: 1.65rem;
+    }
+
+    .complaints-filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .complaints-search-field,
+    .complaints-filter-button {
+        grid-column: auto;
+    }
+
+    .complaints-section-heading,
+    .complaints-results-heading {
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,49 @@
+body.community-edit-page { background: var(--bg); }
+
+.community-edit-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, #12633e, #208d72);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.community-edit-hero > * { position: relative; z-index: 1; }
+.community-edit-hero .hero-badge { color: #fff; }
+.community-edit-hero .hero-title { margin: .7rem 0 .45rem; color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.community-edit-hero .hero-subtitle { margin: 0; color: rgba(255,255,255,.84); }
+
+.community-edit-card {
+    padding: clamp(1.2rem, 3vw, 1.75rem);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.community-edit-heading {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.community-edit-heading h2 { color: var(--text); font-size: 1.3rem; }
+.community-edit-card textarea { min-height: 260px; border-color: var(--border); border-radius: var(--control-radius); }
+
+.community-edit-settings {
+    display: flex;
+    flex-direction: column;
+    padding: 1.15rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+}
+
+@media (max-width: 767.98px) {
+    .community-edit-hero { align-items: stretch; flex-direction: column; }
+}

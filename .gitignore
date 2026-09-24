@@ -1,0 +1,16 @@
+.env
+/vendor/
+/node_modules/
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/private/
+/public/uploads/profiles/
+/public/uploads/complaint-evidence/
+/public/uploads/review-photos/
+/public/uploads/delivery-proofs/
+/tmp/
+*.sql
+!/database/migrations/*.sql
+.DS_Store
+npm-debug.log*
+ani-mart-deploy*.zip

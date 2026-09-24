@@ -1,0 +1,515 @@
+.risk-card {
+    background: #fff;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 1.25rem;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    padding: 1.25rem;
+}
+
+.risk-card .card-body {
+    padding: 1.1rem !important;
+}
+
+.risk-signal {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-alert {
+    border-left: 4px solid #198754;
+    background: #f8fbf8;
+    margin-bottom: 0.9rem;
+    padding: 0.9rem 1rem;
+}
+
+.risk-alert.high {
+    border-left-color: #dc3545;
+}
+
+.risk-alert.medium {
+    border-left-color: #ffc107;
+}
+
+/* ===== Page: admin ===== */
+
+body.admin-page {
+  background: linear-gradient(180deg, #f8fafc, #eef7ef);
+}
+
+/* =========================================
+   ADMIN PAGE
+========================================= */
+
+.admin-page {
+  background: #f5f7fb;
+}
+
+/* =========================================
+   ADMIN GENERIC CARD
+========================================= */
+
+.admin-card {
+  background: white;
+  border-radius: var(--radius-section);
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   APPLICATIONS
+========================================= */
+
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.table tbody tr {
+  transition: 0.25s;
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================================
+   APPLICATION MODAL
+========================================= */
+
+.id-preview {
+  transition: 0.3s;
+  cursor: zoom-in;
+  border-radius: 18px;
+}
+
+.id-preview:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.hero,
+.admin-hero,
+.dashboard-hero,
+.marketplace-hero {
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.9), rgba(255, 255, 255, 0.94));
+  border: 1px solid rgba(34, 197, 94, 0.16);
+  border-radius: 32px;
+  padding: 60px;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 32px 70px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.hero::after,
+.admin-hero::after,
+.dashboard-hero::after,
+.marketplace-hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.16), transparent 55%);
+  top: -40px;
+  right: -40px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 197, 94, 0.12);
+  color: #047857;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.hero-title {
+  color: #0f172a;
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.02;
+}
+
+.hero-subtitle {
+  color: #475569;
+  max-width: 700px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.hero-icon {
+  width: 180px;
+  height: 180px;
+
+  margin: auto;
+
+  border-radius: 40px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 5rem;
+
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================
+   ADMIN STAT CARDS
+========================================= */
+
+.admin-stat-card {
+  background: white;
+
+  border-radius: var(--radius-detail);
+
+  padding: 28px;
+
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+
+  box-shadow: var(--shadow-md);
+
+  transition: var(--transition);
+}
+
+.admin-dashboard-stats .admin-stat-card {
+  height: 100%;
+}
+
+.admin-action {
+  border: 0;
+  color: #143601 !important;
+  background-color: transparent !important;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.admin-action:hover,
+.admin-action:focus-visible,
+.admin-action:active {
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.admin-action-eden {
+  background: var(--fern) !important;
+}
+
+.admin-action-eden:hover,
+.admin-action-eden:focus-visible,
+.admin-action-eden:active {
+  background: #4d6f35 !important;
+}
+
+.admin-action-lime {
+  background: var(--sage-green) !important;
+}
+
+.admin-action-lime:hover,
+.admin-action-lime:focus-visible,
+.admin-action-lime:active {
+  background: #668844 !important;
+  color: #143601 !important;
+}
+
+.admin-action-eco {
+  background: var(--muted-olive) !important;
+  color: #143601 !important;
+}
+
+.admin-action-eco:hover,
+.admin-action-eco:focus-visible,
+.admin-action-eco:active {
+  background: #7c984d !important;
+  color: #143601 !important;
+}
+
+.admin-action-elegant {
+  background: var(--lime-cream) !important;
+  color: #143601 !important;
+}
+
+.admin-action-elegant:hover,
+.admin-action-elegant:focus-visible,
+.admin-action-elegant:active {
+  background: #a1b257 !important;
+  color: #143601 !important;
+}
+
+.admin-action-emerald {
+  background: var(--lemon-chiffon) !important;
+  color: #143601 !important;
+}
+
+.admin-action-emerald:hover,
+.admin-action-emerald:focus-visible,
+.admin-action-emerald:active {
+  background: #d5d19a !important;
+  color: #143601 !important;
+}
+
+.admin-action-rich {
+  background: var(--beige) !important;
+  color: #143601 !important;
+}
+
+.admin-action-rich:hover,
+.admin-action-rich:focus-visible,
+.admin-action-rich:active {
+  background: #deddbf !important;
+  color: #143601 !important;
+}
+
+.admin-stat-card h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================================
+   FARMERS
+========================================= */
+
+.admin-farmers-table {
+  border-collapse: separate;
+
+  border-spacing: 0 12px;
+}
+
+.admin-farmers-table tbody tr {
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+
+  border-radius: var(--radius-xl);
+
+  transition: var(--transition);
+}
+
+.admin-farmers-table tbody tr:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.admin-farmers-table td,
+.admin-farmers-table th {
+  border: none;
+
+  padding: 18px;
+
+  vertical-align: middle;
+}
+
+.farmer-avatar {
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   ORDERS
+========================================= */
+
+.admin-orders-table {
+  border-collapse: separate;
+
+  border-spacing: 0 14px;
+}
+
+.admin-orders-table thead th {
+  border: none;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+}
+
+.admin-orders-table tbody tr {
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+
+  border-radius: 18px;
+
+  transition: var(--transition);
+}
+
+.admin-orders-table tbody tr:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.admin-orders-table td {
+  border: none;
+
+  padding: 18px;
+
+  vertical-align: middle;
+}
+
+.customer-avatar {
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-pill {
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+}
+
+.status-pill.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-pill.accepted {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-pill.preparing {
+  background: #cffafe;
+  color: #155e75;
+}
+
+.status-pill.out-for-delivery {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.status-pill.delivered {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* =========================================
+   ADMIN GLOBAL
+========================================= */
+
+.admin-page .card {
+  border: none;
+
+  border-radius: var(--radius-detail);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.admin-page .btn {
+  border-radius: var(--radius-lg);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .hero,
+  .admin-hero,
+  .dashboard-hero,
+  .marketplace-hero {
+    padding: 35px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .hero-icon {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+}

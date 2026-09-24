@@ -1,0 +1,592 @@
+:root {
+  --trust-bg: #f3faf1;
+}
+
+.report-page-hero {
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.95), rgba(102, 187, 106, 0.95));
+  border-radius: 32px;
+  color: white;
+  padding: 60px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.report-page-hero .hero-subtitle {
+  max-width: 650px;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+.report-page-card {
+  border: none;
+  border-radius: 30px;
+  box-shadow: var(--shadow-md);
+}
+
+.report-page-card .card-body {
+  padding: 36px;
+}
+
+.report-summary-card .card-body {
+  padding: 36px;
+}
+
+.report-page-section {
+  gap: 1.5rem;
+}
+
+.report-page-field {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  transition: var(--transition);
+  background: #ffffff;
+}
+
+.report-page-field:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 6px rgba(46, 125, 50, 0.08);
+}
+
+.report-page-field label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.report-page-field select,
+.report-page-field textarea,
+.report-page-field input[type="file"] {
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+  color: #111827;
+  background: transparent;
+}
+
+.report-page-field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.report-form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.report-help-text {
+  color: var(--muted);
+}
+
+.report-alert {
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+}
+
+.btn-report-submit {
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-weight: 700;
+}
+
+.report-summary-card {
+  border-radius: var(--radius-detail);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.report-summary-card .card-body {
+  padding: 28px;
+}
+
+.report-summary-card h5 {
+  font-weight: 700;
+}
+
+.report-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.report-tag {
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--primary);
+  font-weight: 600;
+}
+/* =========================================================
+   MODERN REPORT FORM
+   ========================================================= */
+
+.report-create-page {
+    background: #f6faf7;
+}
+
+/* Main cards */
+.report-page-card,
+.report-summary-card {
+    border: 1px solid #dce9e1 !important;
+    border-radius: 22px !important;
+    background: #ffffff;
+    box-shadow: 0 8px 28px rgba(25, 65, 42, 0.07);
+    overflow: hidden;
+}
+
+.report-page-card .card-body {
+    padding: 2rem;
+}
+
+.report-summary-card .card-body {
+    padding: 1.5rem;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.report-page-hero {
+    border-radius: 22px !important;
+    padding: 2.5rem !important;
+    background: linear-gradient(
+        135deg,
+        #198754 0%,
+        #146c43 100%
+    );
+    box-shadow: 0 10px 30px rgba(25, 135, 84, 0.15);
+}
+
+.report-page-hero .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.report-page-hero .hero-title {
+    color: #ffffff !important;
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.report-page-hero .hero-subtitle {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 700px;
+}
+
+.report-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.report-tags .btn {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.45rem 0.85rem;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.report-page-card h2 {
+    color: #17251d;
+    font-size: 1.35rem;
+    letter-spacing: -0.2px;
+}
+
+.report-page-card .text-muted {
+    color: #718096 !important;
+}
+
+
+/* =========================================================
+   FIELD WRAPPER
+   ========================================================= */
+
+.report-page-field {
+    position: relative;
+}
+
+.report-page-field > label {
+    display: block;
+    margin-bottom: 0.45rem;
+
+    color: #26372d;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MODERN INPUTS
+   ========================================================= */
+
+.report-page-field .modern-input,
+.report-page-field .form-control,
+.report-page-field .form-select {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0.7rem 0.9rem;
+
+    border: 1.5px solid #cfded5 !important;
+    border-radius: var(--radius-md) !important;
+
+    background-color: #ffffff !important;
+    color: #26372d;
+
+    font-size: 0.88rem;
+
+    box-shadow: none !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Placeholder */
+
+.report-page-field .form-control::placeholder {
+    color: #9aa9a1;
+}
+
+
+/* Hover */
+
+.report-page-field .modern-input:hover,
+.report-page-field .form-control:hover,
+.report-page-field .form-select:hover {
+    border-color: #9fc5ae !important;
+}
+
+
+/* Focus */
+
+.report-page-field .modern-input:focus,
+.report-page-field .form-control:focus,
+.report-page-field .form-select:focus {
+    border-color: #198754 !important;
+
+    background-color: #ffffff !important;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 135, 84, 0.10) !important;
+
+    outline: none;
+}
+
+
+/* =========================================================
+   SELECT DROPDOWNS
+   ========================================================= */
+
+.report-page-field .form-select {
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.report-page-field textarea.form-control {
+    min-height: 180px;
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FILE INPUT
+   ========================================================= */
+
+.report-page-field input[type="file"] {
+    padding: 0.55rem 0.65rem;
+
+    cursor: pointer;
+
+    color: #64748b;
+}
+
+.report-page-field input[type="file"]::file-selector-button {
+    margin-right: 0.75rem;
+
+    padding: 0.55rem 0.9rem;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #e8f5ee;
+    color: #198754;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.report-page-field input[type="file"]::file-selector-button:hover {
+    background: #d5ecdf;
+}
+
+
+/* =========================================================
+   HELP TEXT
+   ========================================================= */
+
+.report-page-field small {
+    color: #84938b !important;
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   REPORT ALERT
+   ========================================================= */
+
+.report-alert {
+    border-radius: var(--radius-md) !important;
+    border-width: 1px;
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+}
+
+
+/* =========================================================
+   FORM FOOTER
+   ========================================================= */
+
+.report-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid #edf2ef;
+}
+
+.report-help-text {
+    color: #7b8b82;
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.btn-report-submit {
+    min-height: 46px;
+
+    padding: 0.65rem 1.35rem;
+
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+
+    background: #198754 !important;
+    color: #ffffff !important;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    box-shadow: 0 5px 14px rgba(25, 135, 84, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn-report-submit:hover {
+    background: #157347 !important;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 18px rgba(25, 135, 84, 0.22);
+}
+
+.btn-report-submit:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.report-summary-card h5 {
+    color: #26372d;
+    font-size: 1rem;
+    font-weight: 750;
+}
+
+.report-summary-card ul li {
+    color: #64748b;
+    font-size: 0.85rem;
+    line-height: 1.55;
+}
+
+.report-summary-card ul li strong {
+    color: #198754;
+}
+
+.report-summary-card .text-muted {
+    color: #718096 !important;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SUMMARY TAGS
+   ========================================================= */
+
+.report-summary-card .report-tag {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.45rem 0.75rem;
+
+    border: 1px solid #cfe4d7;
+    border-radius: 999px;
+
+    background: #f1f9f4;
+    color: #198754;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .container-fluid.px-lg-5.py-5 {
+        padding-top: 1.25rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .report-page-hero {
+        padding: 1.5rem !important;
+        border-radius: 18px !important;
+    }
+
+    .report-page-hero .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .report-page-hero .hero-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .report-page-card,
+    .report-summary-card {
+        border-radius: 18px !important;
+    }
+
+    .report-page-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .report-summary-card .card-body {
+        padding: 1.25rem;
+    }
+
+    .report-page-field .modern-input,
+    .report-page-field .form-control,
+    .report-page-field .form-select {
+        min-height: 46px;
+        font-size: 0.82rem;
+        border-radius: 11px !important;
+    }
+
+    .report-page-field textarea.form-control {
+        min-height: 150px;
+    }
+
+    .report-form-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .report-help-text {
+        display: block;
+        text-align: center;
+    }
+
+    .btn-report-submit {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .report-page-hero {
+        padding: 1.25rem !important;
+    }
+
+    .report-page-hero .hero-title {
+        font-size: 1.55rem;
+    }
+
+    .report-page-card .card-body {
+        padding: 1rem;
+    }
+
+    .report-page-field > label {
+        font-size: 0.76rem;
+    }
+
+    .report-page-field .modern-input,
+    .report-page-field .form-control,
+    .report-page-field .form-select {
+        min-height: 44px;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.78rem;
+    }
+
+    .report-tags .btn {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.7rem;
+    }
+}

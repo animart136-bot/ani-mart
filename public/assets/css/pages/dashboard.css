@@ -1,0 +1,2259 @@
+/* =========================================================
+   UNIFIED DASHBOARD STYLES
+   Mobile-first responsive design
+   ========================================================= */
+
+.admin-dashboard,
+.farmer-dashboard,
+.customer-dashboard {
+    color: #17231c;
+}
+
+.admin-dashboard *,
+.admin-dashboard *::before,
+.admin-dashboard *::after,
+.farmer-dashboard *,
+.farmer-dashboard *::before,
+.farmer-dashboard *::after,
+.customer-dashboard *,
+.customer-dashboard *::before,
+.customer-dashboard *::after {
+    box-sizing: border-box;
+}
+
+/* ========== HERO ========== */
+.dashboard-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-detail);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background:
+        radial-gradient(circle at 90% 10%, rgba(156, 195, 92, .26), transparent 28%),
+        radial-gradient(circle at 10% 100%, rgba(48, 125, 50, .14), transparent 30%),
+        linear-gradient(135deg, #f4f9f2 0%, #ffffff 52%, #eef7ea 100%);
+    border: 1px solid #dce9dc;
+    box-shadow: 0 14px 40px rgba(34, 72, 43, .08);
+}
+
+.dashboard-hero::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -70px;
+    bottom: -90px;
+    border-radius: 50%;
+    background: rgba(47, 125, 50, .08);
+}
+
+.dashboard-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .5rem .85rem;
+    border-radius: 999px;
+    background: #e8f4e8;
+    color: #2f7d32;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.8rem, 5vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    max-width: 850px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    color: #64766b;
+    font-size: clamp(.95rem, 2vw, 1.1rem);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ========== STATS ========== */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.farmer-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.customer-dashboard .dashboard-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.dashboard-stat-card {
+    min-width: 0;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid #dfe9df;
+    border-radius: 22px;
+    background: #fff;
+    color: #17231c;
+    box-shadow: 0 8px 26px rgba(30, 63, 38, .06);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.dashboard-stat-card:hover {
+    transform: translateY(-2px);
+    border-color: #c8ddc8;
+    box-shadow: 0 12px 30px rgba(30, 63, 38, .09);
+}
+
+.dashboard-stat-link {
+    position: relative;
+}
+
+.stat-link-arrow {
+    margin-left: auto;
+    align-self: flex-start;
+    color: #6b7c71;
+}
+
+.stat-icon {
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    font-size: 1.35rem;
+}
+
+.stat-content {
+    min-width: 0;
+}
+
+.stat-content small {
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.stat-content h2 {
+    margin-top: .15rem;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    letter-spacing: -.03em;
+    margin: 0;
+}
+
+.stat-content h3 {
+    margin-top: .15rem;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    letter-spacing: -.03em;
+    margin: 0;
+}
+
+.stat-content p {
+    margin: 4px 0 0 0;
+    color: #66758c;
+    font-size: .88rem;
+    line-height: 1.1;
+}
+
+/* ========== SHARED SECTION ========== */
+.dashboard-section-card {
+    min-width: 0;
+    padding: clamp(1.15rem, 3vw, 1.75rem);
+    border: 1px solid #dfe9df;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(30, 63, 38, .055);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.35rem;
+}
+
+.section-heading-actions {
+    justify-content: space-between;
+}
+
+.section-kicker {
+    display: block;
+    margin-bottom: .25rem;
+    color: #2f7d32;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.section-heading h3,
+.section-heading h4 {
+    color: #17231c;
+    letter-spacing: -.02em;
+    margin: 0;
+}
+
+.section-heading p {
+    font-size: .9rem;
+    margin: 0;
+}
+
+/* ========== ADMIN QUICK ACTIONS ========== */
+.dashboard-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .9rem;
+}
+
+.dashboard-action {
+    min-width: 0;
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem 1.15rem;
+    border: 0;
+    border-radius: 18px;
+    color: #17340f !important;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+
+.dashboard-action > i:first-child {
+    flex: 0 0 auto;
+    font-size: 1.15rem;
+}
+
+.dashboard-action span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-action .action-arrow {
+    margin-left: auto;
+    opacity: .45;
+}
+
+.dashboard-action:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.05);
+    box-shadow: 0 9px 20px rgba(44, 82, 37, .12);
+}
+
+.dashboard-action-eden { background: #6b9648; }
+.dashboard-action-lime { background: #86ad57; }
+.dashboard-action-eco { background: #a6c563; }
+.dashboard-action-elegant { background: #c5dc68; }
+.dashboard-action-emerald { background: #f1eab0; }
+.dashboard-action-rich { background: #f7f4d9; }
+
+/* ========== VERIFICATION ========== */
+.verification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.verification-stat-card {
+    min-width: 0;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    border-radius: 21px;
+    color: #fff;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .08);
+}
+
+.verification-stat-card .stat-icon {
+    background: rgba(255, 255, 255, .18);
+    color: inherit !important;
+}
+
+.verification-stat-card small {
+    display: block;
+    margin-bottom: .2rem;
+    color: rgba(255, 255, 255, .86);
+}
+
+.verification-stat-card h3 {
+    margin: 0;
+}
+
+.trusted-card { background: linear-gradient(135deg, #1877f2, #0b5dcc); }
+.verified-card { background: linear-gradient(135deg, #198754, #12683f); }
+.new-card { background: linear-gradient(135deg, #6c757d, #535b62); }
+
+/* ========== RISK ========== */
+.risk-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.risk-summary-grid .dashboard-stat-card {
+    min-height: 105px;
+}
+
+.risk-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, .9fr);
+    gap: 2rem;
+}
+
+.risk-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .85rem 0;
+    border-bottom: 1px solid #edf1ed;
+}
+
+.risk-list-item:last-child {
+    border-bottom: 0;
+}
+
+.risk-farmer-info {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.risk-farmer-info > div:last-child {
+    min-width: 0;
+}
+
+.risk-avatar {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: #eef6ed;
+    color: #2f7d32;
+}
+
+.alert-item {
+    display: flex;
+    gap: .7rem;
+    padding: .85rem 0;
+    border-bottom: 1px solid #edf1ed;
+    color: #3e4d44;
+}
+
+.alert-item:last-child {
+    border-bottom: 0;
+}
+
+.alert-item > i {
+    flex: 0 0 auto;
+    color: #dc3545;
+    margin-top: .15rem;
+}
+
+/* ========== WIDGETS ========== */
+.dashboard-widget-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.compact-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .85rem 0;
+    border-bottom: 1px solid #edf1ed;
+}
+
+.compact-list-item:last-child {
+    border-bottom: 0;
+}
+
+.compact-list-stack {
+    display: block;
+}
+
+.compact-list-stack > small {
+    display: block;
+    margin-top: .3rem;
+}
+
+.empty-state {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #75847b;
+}
+
+.empty-state i {
+    margin-bottom: .55rem;
+    font-size: 1.7rem;
+    color: #73a06b;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+/* ========== PERFORMANCE ANALYTICS ========== */
+.dashboard-analytics-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(300px, .8fr);
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.dashboard-chart-card {
+    min-width: 0;
+}
+
+.analytics-period {
+    flex: 0 0 auto;
+    padding: .45rem .75rem;
+    border-radius: 999px;
+    background: #eff6ef;
+    color: #416047;
+    font-size: .76rem;
+    font-weight: 800;
+}
+
+.dashboard-chart-wrap {
+    position: relative;
+    height: 310px;
+}
+
+.analytics-empty-note {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    margin: -.25rem 0 1rem;
+    padding: .75rem .9rem;
+    border: 1px solid #e2ebe2;
+    border-radius: 14px;
+    background: #f8fbf8;
+    color: #68776d;
+    font-size: .82rem;
+}
+
+.analytics-empty-note i {
+    color: #2f7d32;
+    font-size: 1rem;
+}
+
+.dashboard-analytics-side {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.dashboard-status-card,
+.dashboard-top-card {
+    min-width: 0;
+}
+
+.dashboard-doughnut-wrap {
+    position: relative;
+    height: 150px;
+    margin: .2rem auto .8rem;
+}
+
+.dashboard-status-legend {
+    display: grid;
+    gap: .4rem;
+}
+
+.dashboard-status-legend > div {
+    display: grid;
+    grid-template-columns: 10px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .5rem;
+    color: #526158;
+    font-size: .78rem;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+.status-dot-0 { background: #2f7d32; }
+.status-dot-1 { background: #e0a21a; }
+.status-dot-2 { background: #2878a8; }
+.status-dot-3 { background: #7952a8; }
+.status-dot-4 { background: #2a9d8f; }
+.status-dot-5 { background: #d94a3a; }
+.status-dot-6 { background: #8a6845; }
+
+.analytics-ranking {
+    display: grid;
+}
+
+.analytics-ranking-row {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .6rem;
+    padding: .65rem 0;
+    border-bottom: 1px solid #edf1ed;
+}
+
+.analytics-ranking-row:last-child { border-bottom: 0; }
+
+.analytics-rank {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #edf6ed;
+    color: #2f7d32;
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+.analytics-rank-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #26362c;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.analytics-rank-value {
+    color: #758078;
+    font-size: .72rem;
+    white-space: nowrap;
+}
+
+.analytics-compact-empty { min-height: 100px; }
+
+@media (max-width: 991.98px) {
+    .dashboard-analytics-grid { grid-template-columns: 1fr; }
+    .dashboard-analytics-side { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+}
+
+@media (max-width: 575.98px) {
+    .dashboard-analytics-side { grid-template-columns: 1fr; }
+    .dashboard-chart-wrap { height: 260px; }
+    .dashboard-analytics-grid .section-heading-actions { align-items: flex-start; }
+}
+
+/* ========== BOTTOM GRID ========== */
+.dashboard-bottom-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(300px, .8fr);
+    gap: 1rem;
+}
+
+.latest-orders-card,
+.recent-farmers-card {
+    min-width: 0;
+}
+
+.latest-orders-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #e8eee8;
+    border-radius: var(--radius-lg);
+}
+
+.latest-orders-table {
+    min-width: 650px;
+}
+
+.latest-orders-table thead th {
+    padding: .9rem 1rem;
+    background: #f3f7f2;
+    color: #516257;
+    font-size: .76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    white-space: nowrap;
+}
+
+.latest-orders-table tbody td {
+    padding: 1rem;
+    border-color: #edf1ed;
+}
+
+.customer-private {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.customer-initials {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-md);
+    background: #eaf4e8;
+    color: #27712d;
+    font-size: .8rem;
+    font-weight: 900;
+    letter-spacing: .03em;
+}
+
+.customer-private-label {
+    color: #4b5d51;
+    font-size: .88rem;
+    font-weight: 650;
+}
+
+.latest-orders-mobile {
+    display: none;
+}
+
+.recent-farmers-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-farmer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .9rem 0;
+    border-bottom: 1px solid #edf1ed;
+}
+
+.recent-farmer:last-child {
+    border-bottom: 0;
+}
+
+.farmer-avatar {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #1d8b62;
+    color: #fff;
+    font-weight: 800;
+}
+
+.farmer-info {
+    min-width: 0;
+}
+
+.farmer-info .fw-bold,
+.farmer-info small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+/* ========== FARMER PRODUCTS ========== */
+.farmer-recent-products-header {
+    margin-top: 55px !important;
+    margin-bottom: 28px !important;
+    position: relative;
+    z-index: 2;
+}
+
+.farmer-recent-products-header h2 {
+    margin-bottom: 6px !important;
+}
+
+.farmer-recent-products-header p {
+    margin-bottom: 0 !important;
+}
+
+.marketplace-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    border: 1px solid color-mix(in srgb, var(--shop-accent, #2F7D32) 22%, #ffffff) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--shop-accent, #2F7D32) 12%, transparent) !important;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease !important;
+}
+
+.marketplace-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--shop-accent, #2F7D32) !important;
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--shop-accent, #2F7D32) 20%, transparent) !important;
+}
+
+.marketplace-card-carousel,
+.marketplace-card-carousel .carousel-inner,
+.marketplace-card-carousel .carousel-item {
+    width: 100% !important;
+    height: 210px !important;
+}
+
+.marketplace-card-carousel {
+    flex: 0 0 210px !important;
+    overflow: hidden !important;
+}
+
+.marketplace-image {
+    width: 100% !important;
+    height: 210px !important;
+    object-fit: cover !important;
+}
+
+.marketplace-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 15px !important;
+    min-height: 0 !important;
+}
+
+.marketplace-card-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.marketplace-category {
+    display: inline-flex !important;
+    align-items: center !important;
+    max-width: 65% !important;
+    padding: 5px 10px !important;
+    background: color-mix(in srgb, var(--shop-secondary, #A8D5A2) 35%, #ffffff) !important;
+    color: var(--shop-accent, #2F7D32) !important;
+    border-radius: 999px !important;
+    font-size: .70rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.marketplace-price {
+    color: var(--shop-accent, #2F7D32) !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+}
+
+.marketplace-product-name {
+    margin: 0 0 8px !important;
+    color: var(--shop-text, #183C2A) !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+}
+
+.marketplace-seller {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    min-width: 0 !important;
+    margin-bottom: 5px !important;
+    color: var(--shop-accent, #2F7D32) !important;
+    font-size: .78rem !important;
+    font-weight: 700 !important;
+}
+
+.marketplace-seller > i.bi-shop {
+    color: var(--shop-accent, #2F7D32) !important;
+}
+
+.marketplace-seller span {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+.marketplace-verified {
+    color: var(--shop-accent, #2F7D32) !important;
+    font-size: .82rem !important;
+    flex: 0 0 auto !important;
+}
+
+.farmer-product-status {
+    margin-bottom: 5px !important;
+}
+
+.marketplace-stock {
+    min-height: 19px !important;
+    margin-bottom: 7px !important;
+    font-size: .72rem !important;
+    line-height: 1.2 !important;
+}
+
+.stock-available {
+    color: #66758c !important;
+}
+
+.stock-low {
+    color: #d08a00 !important;
+    font-weight: 700 !important;
+}
+
+.stock-out {
+    color: #e5394f !important;
+    font-weight: 700 !important;
+}
+
+.marketplace-rating {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    min-height: 20px !important;
+    margin: 0 0 11px !important;
+    white-space: nowrap !important;
+}
+
+.marketplace-rating i {
+    color: #f5b400 !important;
+    font-size: .78rem !important;
+}
+
+.marketplace-rating strong {
+    color: var(--shop-text, #183C2A) !important;
+    font-size: .78rem !important;
+    font-weight: 800 !important;
+}
+
+.marketplace-rating span {
+    color: #7a8799 !important;
+    font-size: .70rem !important;
+}
+
+.marketplace-card-actions {
+    display: flex !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-top: auto !important;
+}
+
+.product-edit-btn {
+    flex: 1 !important;
+    background: var(--shop-accent, #2F7D32) !important;
+    border: 1px solid var(--shop-accent, #2F7D32) !important;
+    color: #ffffff !important;
+    border-radius: var(--control-radius) !important;
+}
+
+.product-edit-btn:hover {
+    background: color-mix(in srgb, var(--shop-accent, #2F7D32) 85%, #000000) !important;
+    border-color: var(--shop-accent, #2F7D32) !important;
+    color: #ffffff !important;
+}
+
+.product-delete-btn {
+    flex: 1 !important;
+    background: #ffffff !important;
+    border: 1px solid #e5394f !important;
+    color: #e5394f !important;
+    border-radius: var(--control-radius) !important;
+}
+
+.product-delete-btn:hover {
+    background: #e5394f !important;
+    color: #ffffff !important;
+}
+
+.farmer-product-item {
+    min-width: 0 !important;
+}
+
+/* ========== TABLET ========== */
+@media (max-width: 1100px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-quick-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-widget-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .verification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .farmer-stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .customer-dashboard .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 767.98px) {
+    .dashboard-hero {
+        border-radius: var(--radius-xl);
+        padding: 1.35rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: .9rem;
+        line-height: 1.55;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+
+    .farmer-stats-row {
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+
+    .customer-dashboard .dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: .7rem;
+    }
+
+    .dashboard-stat-card {
+        min-height: 100px;
+        padding: .9rem;
+        gap: .7rem;
+        border-radius: 17px;
+    }
+
+    .stat-icon {
+        flex-basis: 44px;
+        width: 44px;
+        height: 44px;
+        border-radius: 13px;
+        font-size: 1.05rem;
+    }
+
+    .stat-content small {
+        font-size: .7rem;
+        line-height: 1.2;
+    }
+
+    .stat-content h2,
+    .stat-content h3 {
+        font-size: 1.45rem;
+    }
+
+    .stat-link-arrow {
+        display: none;
+    }
+
+    .dashboard-section-card {
+        padding: 1rem;
+        border-radius: var(--radius-xl);
+    }
+
+    .section-heading {
+        margin-bottom: 1rem;
+    }
+
+    .section-heading-actions {
+        align-items: flex-start;
+        gap: .7rem;
+    }
+
+    .section-heading-actions > .btn {
+        flex: 0 0 auto;
+        font-size: .78rem;
+    }
+
+    .section-heading h3 {
+        font-size: 1.15rem;
+    }
+
+    .section-heading h4 {
+        font-size: 1.05rem;
+    }
+
+    .section-heading p {
+        font-size: .78rem;
+    }
+
+    .dashboard-quick-actions {
+        grid-template-columns: 1fr;
+        gap: .65rem;
+    }
+
+    .dashboard-action {
+        min-height: 60px;
+        padding: .8rem .95rem;
+        border-radius: 15px;
+        font-size: .9rem;
+    }
+
+    .verification-grid,
+    .risk-summary-grid {
+        grid-template-columns: 1fr;
+        gap: .7rem;
+    }
+
+    .verification-stat-card {
+        min-height: 90px;
+        padding: .9rem;
+        border-radius: 17px;
+    }
+
+    .verification-stat-card .stat-icon {
+        flex-basis: 45px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .risk-summary-grid .dashboard-stat-card {
+        min-height: 90px;
+    }
+
+    .risk-list-item {
+        align-items: flex-start;
+        padding: .8rem 0;
+    }
+
+    .risk-farmer-info {
+        align-items: flex-start;
+    }
+
+    .risk-farmer-info small {
+        display: block;
+        line-height: 1.4;
+        margin-top: .15rem;
+    }
+
+    .risk-list-item .badge {
+        flex: 0 0 auto;
+        font-size: .68rem;
+    }
+
+    .dashboard-widget-grid,
+    .dashboard-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compact-list-item {
+        padding: .75rem 0;
+    }
+
+    .latest-orders-table-wrap {
+        display: none;
+    }
+
+    .latest-orders-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+    }
+
+    .order-mobile-card {
+        padding: .9rem;
+        border: 1px solid #e4ece3;
+        border-radius: 17px;
+        background: #fbfdfb;
+    }
+
+    .order-mobile-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: .6rem;
+        padding-bottom: .75rem;
+        border-bottom: 1px solid #e9eee9;
+    }
+
+    .order-number {
+        display: block;
+        font-size: .92rem;
+        font-weight: 850;
+    }
+
+    .order-private-note {
+        display: block;
+        margin-top: .15rem;
+        color: #78867d;
+        font-size: .68rem;
+    }
+
+    .order-mobile-top .badge {
+        font-size: .67rem;
+        white-space: nowrap;
+    }
+
+    .order-mobile-customer {
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+        padding: .85rem 0;
+    }
+
+    .customer-initials-lg {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+    }
+
+    .order-mobile-customer strong {
+        display: block;
+        font-size: .9rem;
+    }
+
+    .order-mobile-customer small {
+        display: block;
+        margin-top: .15rem;
+        color: #7b897f;
+        font-size: .68rem;
+    }
+
+    .order-mobile-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .65rem;
+    }
+
+    .order-mobile-meta > div {
+        padding: .7rem;
+        border-radius: var(--radius-md);
+        background: #f0f6ef;
+    }
+
+    .order-mobile-meta small {
+        display: block;
+        color: #738078;
+        font-size: .65rem;
+        margin-bottom: .15rem;
+    }
+
+    .order-mobile-meta strong {
+        display: block;
+        font-size: .82rem;
+    }
+
+    .recent-farmer {
+        align-items: center;
+        padding: .8rem 0;
+    }
+
+    .recent-farmer .badge {
+        font-size: .65rem;
+    }
+
+    .farmer-avatar {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+    }
+
+    .farmer-recent-products-header {
+        margin-top: 40px !important;
+        margin-bottom: 22px !important;
+        gap: 15px !important;
+    }
+
+    .farmer-recent-products-header h2 {
+        font-size: 1.55rem !important;
+    }
+
+    .farmer-recent-products-header p {
+        font-size: .85rem !important;
+    }
+
+    .marketplace-card-carousel,
+    .marketplace-card-carousel .carousel-inner,
+    .marketplace-card-carousel .carousel-item {
+        height: 145px !important;
+    }
+
+    .marketplace-card-carousel {
+        flex-basis: 145px !important;
+    }
+
+    .marketplace-image {
+        height: 145px !important;
+    }
+
+    .marketplace-card-content {
+        padding: 10px !important;
+    }
+
+    .marketplace-card-top {
+        gap: 5px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .marketplace-category {
+        max-width: 62% !important;
+        padding: 4px 7px !important;
+        font-size: .60rem !important;
+    }
+
+    .marketplace-price {
+        font-size: .78rem !important;
+    }
+
+    .marketplace-product-name {
+        margin-bottom: 5px !important;
+        font-size: .88rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .marketplace-seller {
+        gap: 4px !important;
+        margin-bottom: 5px !important;
+        font-size: .63rem !important;
+    }
+
+    .marketplace-seller > i.bi-shop {
+        font-size: .68rem !important;
+    }
+
+    .marketplace-verified {
+        font-size: .68rem !important;
+    }
+
+    .farmer-product-status {
+        min-height: 20px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .farmer-product-status .badge {
+        padding: 4px 7px !important;
+        font-size: .57rem !important;
+    }
+
+    .marketplace-stock {
+        min-height: 16px !important;
+        margin-bottom: 5px !important;
+        font-size: .59rem !important;
+    }
+
+    .marketplace-rating {
+        gap: 3px !important;
+        min-height: 18px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .marketplace-rating i {
+        font-size: .64rem !important;
+    }
+
+    .marketplace-rating strong {
+        font-size: .65rem !important;
+    }
+
+    .marketplace-rating span {
+        font-size: .57rem !important;
+    }
+
+    .marketplace-card-actions {
+        gap: 6px !important;
+    }
+
+    .product-edit-btn,
+    .product-delete-btn {
+        min-height: 34px !important;
+        padding: 7px 5px !important;
+        border-radius: 8px !important;
+        font-size: .60rem !important;
+    }
+
+    .product-edit-btn i,
+    .product-delete-btn i {
+        margin-right: 3px !important;
+        font-size: .68rem !important;
+    }
+}
+
+/* ========== SMALL PHONES ========== */
+@media (max-width: 430px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .farmer-stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-dashboard .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-stat-card {
+        min-height: 88px;
+    }
+
+    .dashboard-hero {
+        padding: 1.15rem;
+    }
+
+    .hero-title {
+        font-size: 1.55rem;
+    }
+
+    .section-heading-actions {
+        flex-direction: column;
+    }
+
+    .section-heading-actions > .btn {
+        align-self: flex-start;
+    }
+
+    .dashboard-action {
+        min-height: 56px;
+    }
+
+    .order-mobile-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .marketplace-card-carousel,
+    .marketplace-card-carousel .carousel-inner,
+    .marketplace-card-carousel .carousel-item {
+        height: 130px !important;
+    }
+
+    .marketplace-card-carousel {
+        flex-basis: 130px !important;
+    }
+
+    .marketplace-image {
+        height: 130px !important;
+    }
+
+    .marketplace-product-name {
+        font-size: .82rem !important;
+    }
+
+    .marketplace-seller {
+        font-size: .59rem !important;
+    }
+
+    .product-edit-btn,
+    .product-delete-btn {
+        font-size: .56rem !important;
+    }
+}
+
+/* =========================================================
+   CUSTOMER DASHBOARD — ANI-MART APP THEME
+   This route belongs to the customer-facing app, so it uses
+   the shared tokens declared in app.css instead of shop/admin colors.
+   ========================================================= */
+
+.customer-dashboard {
+    color: var(--text);
+}
+
+.customer-dashboard .dashboard-hero {
+    padding: clamp(1.75rem, 3vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+    border-color: rgba(17, 81, 52, 0.18);
+    background:
+        radial-gradient(circle at 85% 12%, rgba(255,255,255,0.12), transparent 20%),
+        linear-gradient(135deg, #0f7d54 0%, #177d58 38%, #0f6f4c 100%);
+    box-shadow: 0 14px 32px rgba(14, 64, 46, 0.12);
+}
+
+.customer-dashboard .dashboard-hero::after {
+    background: rgba(255,255,255,0.08);
+    width: 240px;
+    height: 240px;
+    right: -80px;
+    bottom: -100px;
+}
+
+.customer-dashboard .dashboard-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0.15rem 0;
+}
+
+.customer-dashboard .hero-badge {
+    color: #ffffff;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    letter-spacing: 0.12em;
+    padding: 0.5rem 0.9rem;
+}
+
+.customer-dashboard .hero-title,
+.customer-dashboard .section-heading h3,
+.customer-dashboard .section-heading h4,
+.customer-dashboard .stat-content h3,
+.customer-dashboard td {
+    color: var(--text);
+}
+
+.customer-dashboard .hero-title {
+    margin-top: 1rem !important;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+    max-width: 980px;
+}
+
+.customer-dashboard .hero-subtitle,
+.customer-dashboard .section-heading p,
+.customer-dashboard .stat-content p,
+.customer-dashboard .analytics-rank-value,
+.customer-dashboard .dashboard-status-legend > div {
+    color: var(--muted) !important;
+}
+
+.customer-dashboard .hero-subtitle {
+    margin-top: 0.9rem;
+    color: rgba(255,255,255,0.88) !important;
+    font-size: clamp(1rem, 2vw, 1.12rem);
+    max-width: 700px;
+}
+
+.customer-dashboard .dashboard-stat-card,
+.customer-dashboard .dashboard-section-card {
+    border-color: var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.customer-dashboard .dashboard-stat-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+}
+
+.customer-dashboard .dashboard-stat-card .stat-icon {
+    color: var(--primary) !important;
+    background: color-mix(in srgb, var(--primary) 11%, var(--surface)) !important;
+}
+
+.customer-dashboard .dashboard-stat-card:nth-child(2) .stat-icon {
+    color: var(--accent) !important;
+    background: color-mix(in srgb, var(--accent) 12%, var(--surface)) !important;
+}
+
+.customer-dashboard .dashboard-stat-card:nth-child(3) .stat-icon {
+    color: var(--secondary) !important;
+    background: color-mix(in srgb, var(--secondary) 12%, var(--surface)) !important;
+}
+
+.customer-dashboard .dashboard-stat-card:nth-child(4) .stat-icon {
+    color: var(--primary-dark) !important;
+    background: color-mix(in srgb, var(--primary-light) 13%, var(--surface)) !important;
+}
+
+.customer-dashboard .section-kicker,
+.customer-dashboard .analytics-empty-note i,
+.customer-dashboard .analytics-rank {
+    color: var(--primary);
+}
+
+.customer-dashboard .analytics-period,
+.customer-dashboard .analytics-empty-note,
+.customer-dashboard .analytics-rank {
+    border-color: var(--border);
+    background: var(--surface-soft);
+}
+
+.customer-dashboard .analytics-period {
+    color: var(--primary-dark);
+}
+
+.customer-dashboard .analytics-ranking-row {
+    border-bottom-color: var(--border);
+}
+
+.customer-dashboard .analytics-rank-name {
+    color: var(--text);
+}
+
+.customer-dashboard .dashboard-action {
+    border: 1px solid transparent;
+    color: #ffffff !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.customer-dashboard .dashboard-action-eden {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.customer-dashboard .dashboard-action-lime {
+    background: linear-gradient(135deg, var(--secondary), color-mix(in srgb, var(--secondary) 72%, var(--primary-light)));
+}
+
+.customer-dashboard .dashboard-action-eco {
+    border-color: var(--border-strong);
+    color: var(--primary-dark) !important;
+    background: linear-gradient(135deg, var(--surface-soft), color-mix(in srgb, var(--primary-light) 15%, var(--surface)));
+}
+
+.customer-dashboard .dashboard-action:hover {
+    border-color: color-mix(in srgb, var(--primary) 38%, var(--border));
+    box-shadow: var(--shadow-md);
+}
+
+.customer-dashboard .dashboard-action .action-arrow {
+    opacity: .72;
+}
+
+.customer-dashboard .btn-outline-success {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    background: var(--surface) !important;
+}
+
+.customer-dashboard .btn-outline-success:hover {
+    color: #ffffff !important;
+    background: var(--primary) !important;
+}
+
+.customer-dashboard .table {
+    --bs-table-bg: var(--surface);
+    --bs-table-color: var(--text);
+    --bs-table-border-color: var(--border);
+}
+
+.customer-dashboard .table thead th {
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+    border-bottom-color: var(--border-strong);
+}
+
+.customer-dashboard .table tbody tr:hover > * {
+    background: color-mix(in srgb, var(--primary) 5%, var(--surface));
+}
+
+.customer-dashboard .empty-state {
+    color: var(--muted);
+}
+
+.customer-dashboard .empty-state i {
+    color: var(--primary-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-stat-card,
+    .dashboard-action,
+    .marketplace-card {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   UNIFIED DASHBOARD ADDITIONS
+   ========================================================= */
+.farmer-dashboard .dashboard-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.shop-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.shop-overview-item {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    padding: 1rem;
+    border: 1px solid #e2ebe2;
+    border-radius: 18px;
+    background: #fafdf9;
+}
+
+.shop-overview-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: color-mix(in srgb, var(--shop-accent, #2f7d32) 12%, white);
+    color: var(--shop-accent, #2f7d32);
+    font-size: 1.2rem;
+}
+
+.shop-overview-item small {
+    display: block;
+    color: #718076;
+    font-size: .76rem;
+    font-weight: 600;
+    margin-bottom: .15rem;
+}
+
+.shop-overview-item strong {
+    display: block;
+    color: var(--shop-text, #183c2a);
+    font-size: .95rem;
+}
+
+.farmer-dashboard .dashboard-action:hover {
+    border-color: var(--shop-secondary, #a8d5a2);
+}
+
+.farmer-dashboard .stat-icon {
+    background: color-mix(in srgb, var(--shop-accent, #2f7d32) 10%, white);
+    color: var(--shop-accent, #2f7d32);
+}
+
+/* =========================================================
+   FARMER DASHBOARD - THREE STATISTICS
+   ========================================================= */
+
+.farmer-dashboard .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.farmer-dashboard .dashboard-stat-card {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    min-height: 150px;
+}
+
+
+/* =========================================================
+   FARMER SHOP OVERVIEW
+   ========================================================= */
+
+.farmer-shop-overview {
+    width: 100%;
+}
+
+.farmer-shop-overview .section-heading {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Shop information grid */
+.shop-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+
+/* Individual information item */
+.shop-overview-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    padding: 1.25rem 1.35rem;
+    background: var(--shop-background, #f2f8f4);
+    border: 1px solid color-mix(
+        in srgb,
+        var(--shop-accent, #2f7d32) 15%,
+        transparent
+    );
+    border-radius: 1rem;
+}
+
+
+/* Shop information icon */
+.shop-overview-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: color-mix(
+        in srgb,
+        var(--shop-accent, #2f7d32) 10%,
+        white
+    );
+    color: var(--shop-accent, #2f7d32);
+    font-size: 1.35rem;
+}
+
+
+/* Text wrapper */
+.shop-overview-item > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+
+/* Label */
+.shop-overview-item small {
+    display: block;
+    color: #6b7280;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+/* Value */
+.shop-overview-item strong {
+    display: block;
+    color: var(--shop-text, #183c2a);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   MANAGE SHOP BUTTON
+   ========================================================= */
+
+.farmer-dashboard .manage-shop-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0.75rem 1.25rem;
+    border: 1.5px solid var(--shop-accent, #2f7d32);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--shop-accent, #2f7d32);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.farmer-dashboard .manage-shop-btn:hover {
+    background: var(--shop-accent, #2f7d32);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   FARMER DASHBOARD RESPONSIVE
+   ========================================================= */
+
+/* Tablet */
+@media (max-width: 991.98px) {
+
+    .farmer-dashboard .dashboard-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .farmer-dashboard .dashboard-stat-card {
+        padding: 1.25rem;
+    }
+
+    .shop-overview-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* Small tablet / large phone */
+@media (max-width: 767.98px) {
+
+    .farmer-dashboard .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .shop-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Phone */
+@media (max-width: 480px) {
+
+    .farmer-dashboard .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .farmer-dashboard .dashboard-stat-card {
+        min-height: 120px;
+        padding: 1rem;
+    }
+
+    .shop-overview-item {
+        padding: 1rem;
+    }
+
+    .farmer-dashboard .section-heading-actions {
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .farmer-dashboard .manage-shop-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .farmer-dashboard .dashboard-stats,
+    .shop-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .farmer-dashboard .dashboard-stats,
+    .shop-overview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   FARMER DASHBOARD
+   STATS - ALWAYS 3 COLUMNS
+   ========================================================= */
+
+.farmer-dashboard .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.farmer-dashboard .dashboard-stat-card {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   FARMER SHOP OVERVIEW
+   ========================================================= */
+
+.farmer-shop-overview {
+    position: relative;
+    overflow: hidden;
+}
+
+.farmer-shop-overview .section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.farmer-shop-overview .section-heading > div:first-child {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   MANAGE SHOP BUTTON
+   ========================================================= */
+
+.manage-shop-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.55rem;
+
+    flex: 0 0 auto;
+
+    min-height: 52px;
+
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid rgba(47, 125, 50, 0.35);
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #247331;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.manage-shop-btn i {
+    font-size: 1.05rem;
+}
+
+.manage-shop-btn:hover {
+    background: #f1f8f2;
+    border-color: #2f7d32;
+    color: #1f6827;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 18px rgba(47, 125, 50, 0.1);
+}
+
+
+/* =========================================================
+   SHOP INFORMATION
+   ========================================================= */
+
+.shop-overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    margin-top: 1.75rem;
+}
+
+
+.shop-overview-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.9rem;
+
+    min-width: 0;
+
+    padding: 1rem 1.1rem;
+
+    border: 1px solid #e5eee7;
+
+    border-radius: var(--radius-lg);
+
+    background: #f9fcfa;
+}
+
+
+/* =========================================================
+   SHOP ICON
+   ========================================================= */
+
+.shop-overview-icon {
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #edf7ef;
+
+    color: #2f7d32;
+
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   SHOP TEXT
+   ========================================================= */
+
+.shop-overview-item > div:last-child {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+}
+
+.shop-overview-item small {
+    display: block;
+
+    color: #6b7a6d;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+.shop-overview-item strong {
+    display: block;
+
+    color: #193022;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   FARMER QUICK ACTIONS
+   ========================================================= */
+
+.farmer-dashboard .dashboard-quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 0.75rem;
+}
+
+.farmer-dashboard .dashboard-action {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .shop-overview-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 0.75rem;
+    }
+
+    .shop-overview-item {
+        padding: 0.85rem;
+
+        gap: 0.65rem;
+    }
+
+    .shop-overview-icon {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+
+        font-size: 1rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /*
+     * Keep farmer stats 3 across.
+     */
+
+    .farmer-dashboard .dashboard-stats {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 0.75rem;
+    }
+
+
+    .farmer-dashboard .dashboard-stat-card {
+        padding: 1rem;
+
+        gap: 0.65rem;
+    }
+
+
+    .farmer-dashboard .stat-icon {
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+    }
+
+
+    .farmer-dashboard .stat-content h3 {
+        font-size: 1.25rem;
+    }
+
+
+    .farmer-dashboard .stat-content p {
+        font-size: 0.8rem;
+    }
+
+
+    /*
+     * Shop header
+     */
+
+    .farmer-shop-overview .section-heading {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .manage-shop-btn {
+        width: 100%;
+    }
+
+
+    /*
+     * Shop information
+     */
+
+    .shop-overview-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0.75rem;
+    }
+
+
+    .shop-overview-item {
+        width: 100%;
+
+        min-height: 68px;
+    }
+
+
+    /*
+     * Farmer quick actions
+     */
+
+    .farmer-dashboard .dashboard-quick-actions {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    /*
+     * Farmer statistics remain 3 columns.
+     */
+
+    .farmer-dashboard .dashboard-stats {
+        gap: 0.5rem;
+    }
+
+
+    .farmer-dashboard .dashboard-stat-card {
+        padding: 0.7rem;
+
+        gap: 0.4rem;
+    }
+
+
+    .farmer-dashboard .stat-icon {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+
+        font-size: 0.9rem;
+    }
+
+
+    .farmer-dashboard .stat-content h3 {
+        font-size: 1rem;
+    }
+
+
+    .farmer-dashboard .stat-content p {
+        font-size: 0.7rem;
+    }
+
+
+    /*
+     * Farmer quick actions
+     */
+
+    .farmer-dashboard .dashboard-quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+     * Shop
+     */
+
+    .farmer-shop-overview {
+        padding: 1rem;
+    }
+
+
+    .shop-overview-item {
+        padding: 0.8rem;
+    }
+
+}

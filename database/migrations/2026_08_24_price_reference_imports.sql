@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS price_references (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    commodity VARCHAR(180) NOT NULL,
+    normalized_commodity VARCHAR(180) NOT NULL,
+    category VARCHAR(120) NULL,
+    variety VARCHAR(120) NULL,
+    unit VARCHAR(40) NOT NULL,
+    region VARCHAR(180) NULL,
+    province VARCHAR(180) NULL,
+    municipality VARCHAR(180) NULL,
+    market VARCHAR(180) NULL,
+    reference_price DECIMAL(10,2) NOT NULL,
+    minimum_price DECIMAL(10,2) NULL,
+    maximum_price DECIMAL(10,2) NULL,
+    price_date DATE NOT NULL,
+    source VARCHAR(255) NOT NULL,
+    source_url VARCHAR(500) NULL,
+    is_active TINYINT(1) NOT NULL DEFAULT 1,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_price_reference_lookup (normalized_commodity, unit, is_active, price_date),
+    INDEX idx_price_reference_location (region, province, municipality, market)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

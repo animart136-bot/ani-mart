@@ -1,0 +1,555 @@
+/* Ani-Mart brand treatment for the restricted administration dashboard. */
+body.admin-console-page {
+    background:
+        radial-gradient(circle at 92% 4%, rgba(70, 163, 108, 0.12), transparent 25rem),
+        #f3f8f4;
+    color: var(--primary-dark);
+}
+
+.admin-console-hero {
+    background:
+        radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.14), transparent 16rem),
+        linear-gradient(120deg, var(--primary-dark), var(--primary) 66%, var(--primary-light));
+    box-shadow: 0 22px 50px rgba(20, 92, 59, 0.22);
+}
+
+.admin-console-eyebrow,
+.admin-console-hero p,
+.admin-console-identity small {
+    color: #d8f3e3;
+}
+
+.admin-console-identity {
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.admin-avatar {
+    background: #ffffff;
+    color: var(--primary-dark);
+}
+
+.admin-console-sidebar {
+    border-color: color-mix(in srgb, var(--primary) 40%, var(--primary-dark));
+    background: linear-gradient(180deg, var(--primary-dark), #10472f);
+    color: #e9f8ef;
+    box-shadow: 0 15px 35px rgba(20, 92, 59, 0.18);
+}
+
+.admin-sidebar-heading,
+.admin-sidebar-note {
+    color: #a9d8bd;
+}
+
+.admin-sidebar-note {
+    border-top-color: rgba(255, 255, 255, 0.14);
+}
+
+.admin-console-sidebar nav a {
+    color: #d7eee0;
+}
+
+.admin-console-sidebar nav a:hover,
+.admin-console-sidebar nav a.active {
+    color: #ffffff;
+    background: color-mix(in srgb, var(--primary-light) 35%, transparent);
+}
+
+.admin-console-sidebar nav a.active {
+    box-shadow: inset 3px 0 var(--secondary);
+}
+
+.admin-priority-banner {
+    border-color: #cce7d8;
+    background: #f4fcf7;
+}
+
+.admin-priority-icon {
+    color: var(--primary-dark);
+    background: #dff3e7;
+}
+
+.admin-priority-banner strong,
+.admin-section-heading h2,
+.admin-metric-card,
+a.admin-metric-card:hover,
+.admin-table td:first-child,
+.admin-status-row > span strong {
+    color: var(--primary-dark);
+}
+
+.admin-metric-card,
+.admin-section {
+    border-color: #d8e8dd;
+    box-shadow: 0 6px 22px rgba(20, 92, 59, 0.06);
+}
+
+a.admin-metric-card:hover,
+.admin-queue-card:hover,
+.admin-control-links a:hover {
+    border-color: color-mix(in srgb, var(--primary) 45%, #ffffff);
+    background: #f5fbf7;
+    color: var(--primary-dark);
+}
+
+.metric-green,
+.metric-blue,
+.metric-violet {
+    color: var(--primary-dark);
+    background: #e1f2e7;
+}
+
+.metric-amber {
+    color: #8a5200;
+    background: #fff0d8;
+}
+
+.admin-section-heading span,
+.admin-section-heading a,
+.admin-queue-card > i,
+.admin-control-links a > i {
+    color: var(--primary);
+}
+
+.admin-queue-card,
+.admin-control-links a {
+    border-color: #deebe2;
+    color: #294536;
+}
+
+.admin-queue-card b {
+    color: var(--primary-dark);
+    background: #e8f3eb;
+}
+
+.admin-table th {
+    border-bottom-color: #d8e8dd;
+    color: #587064;
+    background: #f5faf6;
+}
+
+.admin-table td {
+    border-bottom-color: #e8f1eb;
+    color: #50675a;
+}
+
+.admin-status-row > div {
+    background: #e5eee8;
+}
+
+.admin-status-row > div i {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+}
+
+.admin-seller-list > div:hover {
+    background: #f2f8f4;
+}
+
+.admin-seller-list > div > i,
+.admin-seller-avatar {
+    color: var(--primary-dark);
+}
+
+.admin-seller-avatar {
+    background: #dff0e5;
+}
+
+/* The administration console inherits Ani-Mart's shared app.css tokens. */
+body.admin-console-page {
+    color: var(--text);
+    background:
+        radial-gradient(circle at 92% 4%, color-mix(in srgb, var(--primary-light) 14%, transparent), transparent 25rem),
+        var(--bg);
+}
+
+.admin-console-hero {
+    background:
+        radial-gradient(circle at 88% 10%, color-mix(in srgb, var(--surface) 16%, transparent), transparent 16rem),
+        linear-gradient(120deg, var(--primary-dark), var(--primary) 66%, var(--secondary));
+    box-shadow: 0 22px 50px color-mix(in srgb, var(--primary-dark) 24%, transparent);
+}
+
+.admin-console-eyebrow,
+.admin-console-hero p,
+.admin-console-identity small {
+    color: color-mix(in srgb, var(--surface) 82%, var(--primary-light));
+}
+
+.admin-console-identity {
+    border-color: color-mix(in srgb, var(--surface) 25%, transparent);
+    background: color-mix(in srgb, var(--surface) 12%, transparent);
+}
+
+.admin-avatar {
+    color: var(--primary-dark);
+    background: var(--surface);
+}
+
+.admin-console-sidebar {
+    border-color: color-mix(in srgb, var(--primary) 45%, var(--primary-dark));
+    color: var(--surface);
+    background: linear-gradient(
+        180deg,
+        var(--primary-dark),
+        color-mix(in srgb, var(--primary-dark) 82%, var(--secondary))
+    );
+    box-shadow: 0 15px 35px color-mix(in srgb, var(--primary-dark) 22%, transparent);
+}
+
+.admin-sidebar-heading,
+.admin-sidebar-note {
+    color: color-mix(in srgb, var(--surface) 64%, var(--primary-light));
+}
+
+.admin-sidebar-note {
+    border-top-color: color-mix(in srgb, var(--surface) 15%, transparent);
+}
+
+.admin-console-sidebar nav a {
+    color: color-mix(in srgb, var(--surface) 84%, var(--primary-light));
+}
+
+.admin-console-sidebar nav a:hover,
+.admin-console-sidebar nav a.active {
+    color: var(--surface);
+    background: color-mix(in srgb, var(--primary-light) 34%, transparent);
+}
+
+.admin-console-sidebar nav a.active {
+    box-shadow: inset 3px 0 var(--secondary);
+}
+
+.admin-priority-banner {
+    border-color: var(--border);
+    background: var(--surface-soft);
+}
+
+.admin-priority-icon {
+    color: var(--primary-dark);
+    background: color-mix(in srgb, var(--primary) 13%, var(--surface));
+}
+
+.admin-priority-banner.has-work {
+    border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+    background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+
+.admin-priority-banner.has-work .admin-priority-icon {
+    color: color-mix(in srgb, var(--accent) 80%, var(--text));
+    background: color-mix(in srgb, var(--accent) 17%, var(--surface));
+}
+
+.admin-priority-banner strong,
+.admin-section-heading h2,
+.admin-metric-card,
+a.admin-metric-card:hover,
+.admin-table td:first-child,
+.admin-status-row > span strong,
+.admin-queue-card,
+.admin-control-links a {
+    color: var(--text);
+}
+
+.admin-priority-banner p,
+.admin-priority-banner time,
+.admin-metric-card small,
+.admin-metric-card em,
+.admin-section-heading small,
+.admin-queue-card small,
+.admin-table td,
+.admin-status-row > span,
+.admin-seller-list small,
+.admin-control-links small,
+.admin-empty {
+    color: var(--muted);
+}
+
+.admin-metric-card,
+.admin-section {
+    border-color: var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+a.admin-metric-card:hover,
+.admin-queue-card:hover,
+.admin-control-links a:hover {
+    border-color: var(--border-strong);
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+}
+
+.metric-green {
+    color: var(--primary-dark);
+    background: color-mix(in srgb, var(--primary) 12%, var(--surface));
+}
+
+.metric-blue {
+    color: var(--secondary);
+    background: color-mix(in srgb, var(--secondary) 12%, var(--surface));
+}
+
+.metric-violet {
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary-light) 15%, var(--surface));
+}
+
+.metric-amber {
+    color: color-mix(in srgb, var(--accent) 82%, var(--text));
+    background: color-mix(in srgb, var(--accent) 13%, var(--surface));
+}
+
+.admin-section-heading span,
+.admin-section-heading a,
+.admin-queue-card > i,
+.admin-control-links a > i {
+    color: var(--primary);
+}
+
+.admin-queue-card,
+.admin-control-links a {
+    border-color: var(--border);
+}
+
+.admin-queue-card b {
+    color: var(--primary-dark);
+    background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+}
+
+.admin-table th {
+    border-bottom-color: var(--border-strong);
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+}
+
+.admin-table td {
+    border-bottom-color: var(--border);
+}
+
+.admin-status-row > div {
+    background: var(--border);
+}
+
+.admin-status-row > div i {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+}
+
+.admin-seller-list > div:hover {
+    background: var(--surface-soft);
+}
+
+.admin-seller-list > div > i,
+.admin-seller-avatar {
+    color: var(--primary-dark);
+}
+
+.admin-seller-avatar {
+    background: color-mix(in srgb, var(--primary) 12%, var(--surface));
+}
+
+/* Admin console mobile layout. Kept here so other role dashboards are untouched. */
+@media (max-width: 900px) {
+    .admin-console-page .admin-console {
+        width: 100%;
+        max-width: 100%;
+        padding-right: .75rem;
+        padding-left: .75rem;
+        overflow-x: clip;
+    }
+
+    .admin-console-page .admin-console-layout,
+    .admin-console-page .admin-console-main,
+    .admin-console-page .admin-console-sidebar {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .admin-console-page .admin-console-layout {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .admin-console-page .admin-console-sidebar {
+        padding: .65rem;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .admin-console-page .admin-console-sidebar nav {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        gap: .35rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .admin-console-page .admin-console-sidebar nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .admin-console-page .admin-console-sidebar nav a {
+        flex: 0 0 auto;
+        min-height: 44px;
+        padding: .7rem .8rem;
+        white-space: nowrap;
+    }
+
+    .admin-console-page .admin-metric-card,
+    .admin-console-page .admin-queue-card,
+    .admin-console-page .admin-section,
+    .admin-console-page .admin-priority-banner {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .admin-console-page .admin-metric-card > span:last-child,
+    .admin-console-page .admin-queue-card span,
+    .admin-console-page .admin-control-links span,
+    .admin-console-page .admin-seller-list > div > span:nth-child(2) {
+        min-width: 0;
+    }
+
+    .admin-console-page .admin-metric-card small,
+    .admin-console-page .admin-metric-card em,
+    .admin-console-page .admin-queue-card strong,
+    .admin-console-page .admin-queue-card small,
+    .admin-console-page .admin-control-links strong,
+    .admin-console-page .admin-control-links small,
+    .admin-console-page .admin-seller-list strong,
+    .admin-console-page .admin-seller-list small {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 680px) {
+    .admin-console-page .admin-console-hero {
+        gap: 1rem;
+        padding: 1.25rem;
+        border-radius: 1.1rem;
+    }
+
+    .admin-console-page .admin-console-eyebrow {
+        font-size: .68rem;
+        line-height: 1.35;
+    }
+
+    .admin-console-page .admin-console-hero h1 {
+        margin-top: .6rem;
+        font-size: clamp(1.55rem, 8vw, 2.1rem);
+        overflow-wrap: anywhere;
+    }
+
+    .admin-console-page .admin-console-hero p {
+        font-size: .86rem;
+        line-height: 1.5;
+    }
+
+    .admin-console-page .admin-priority-banner {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: .75rem;
+        padding: .9rem;
+    }
+
+    .admin-console-page .admin-priority-banner div {
+        min-width: 0;
+    }
+
+    .admin-console-page .admin-priority-banner strong,
+    .admin-console-page .admin-priority-banner p {
+        overflow-wrap: anywhere;
+    }
+
+    .admin-console-page .admin-priority-icon {
+        width: 2.45rem;
+        height: 2.45rem;
+    }
+
+    .admin-console-page .admin-metric-grid,
+    .admin-console-page .admin-queue-grid,
+    .admin-console-page .admin-content-grid,
+    .admin-console-page .admin-content-grid-lower,
+    .admin-console-page .admin-control-links {
+        grid-template-columns: minmax(0, 1fr);
+        gap: .75rem;
+    }
+
+    .admin-console-page .admin-metric-grid {
+        margin: .85rem 0;
+    }
+
+    .admin-console-page .admin-metric-card {
+        min-height: 90px;
+        padding: .95rem;
+        border-radius: .9rem;
+    }
+
+    .admin-console-page .metric-icon {
+        width: 2.65rem;
+        height: 2.65rem;
+    }
+
+    .admin-console-page .admin-section {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .admin-console-page .admin-section-heading {
+        flex-wrap: wrap;
+        gap: .6rem;
+        margin-bottom: .9rem;
+    }
+
+    .admin-console-page .admin-section-heading > div {
+        min-width: 0;
+        flex: 1 1 190px;
+    }
+
+    .admin-console-page .admin-section-heading small,
+    .admin-console-page .admin-section-heading a {
+        line-height: 1.4;
+    }
+
+    .admin-console-page .admin-queue-card {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        min-height: 76px;
+        padding: .85rem;
+    }
+
+    .admin-console-page .admin-control-links a {
+        min-height: 68px;
+        padding: .8rem;
+    }
+
+    .admin-console-page .admin-seller-list > div {
+        min-width: 0;
+        padding: .65rem .35rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .admin-console-page .admin-console {
+        padding-right: .6rem;
+        padding-left: .6rem;
+    }
+
+    .admin-console-page .admin-section-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admin-console-page .admin-section-heading > div {
+        flex-basis: auto;
+    }
+
+    .admin-console-page .admin-section-heading a {
+        align-self: flex-start;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Ani-Mart product image placeholder</title>
+  <desc id="description">A simple basket of fresh farm produce on a soft green background.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eff8f2"/>
+      <stop offset="1" stop-color="#d9eee1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#background)"/>
+  <circle cx="400" cy="280" r="170" fill="#fff" opacity=".75"/>
+  <path d="M267 284h266l-30 151H297z" fill="#a96835"/>
+  <path d="M284 314h232M278 354h230M290 394h208" fill="none" stroke="#f0c28e" stroke-width="14" stroke-linecap="round"/>
+  <path d="M331 292c0-76 31-119 69-119s69 43 69 119" fill="none" stroke="#87512b" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="340" cy="272" r="48" fill="#e76f51"/>
+  <circle cx="410" cy="253" r="52" fill="#f4a261"/>
+  <circle cx="472" cy="283" r="46" fill="#e9c46a"/>
+  <path d="M340 225c-6-31 7-53 38-65-2 31-14 51-38 65zM410 204c5-33 24-51 57-55-11 30-29 48-57 55zM471 242c16-29 39-39 70-29-21 24-44 34-70 29z" fill="#2a9d68"/>
+  <text x="400" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#216e47">Fresh product image coming soon</text>
+</svg>

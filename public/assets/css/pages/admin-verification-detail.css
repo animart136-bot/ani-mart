@@ -1,0 +1,209 @@
+.admin-verification-detail-page {
+    background:
+        radial-gradient(circle at 92% 3%, color-mix(in srgb, var(--primary-light) 12%, transparent), transparent 24rem),
+        var(--bg);
+}
+
+.verification-detail-page {
+    color: var(--text);
+}
+
+.verification-detail-hero {
+    margin-bottom: 1.5rem !important;
+}
+
+.verification-badge-card,
+.verification-metric-card,
+.verification-detail-panel {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.verification-badge-card .card-body {
+    padding: 1.5rem !important;
+}
+
+.verification-card-title {
+    margin: 0 0 1rem;
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.verification-current-badge {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+}
+
+.verification-current-badge-icon {
+    display: grid;
+    place-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    padding: 0;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+}
+
+.verification-current-badge strong,
+.verification-current-badge small {
+    display: block;
+}
+
+.verification-current-badge strong {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.verification-current-badge small {
+    margin-top: .2rem;
+    color: var(--muted);
+    font-size: .78rem;
+}
+
+.verification-badge-card form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.verification-badge-card .btn {
+    min-height: 44px;
+    white-space: nowrap;
+}
+
+.verification-metric-card {
+    position: relative;
+}
+
+.verification-metric-card::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--primary);
+    content: "";
+}
+
+.verification-metrics-grid > div:nth-child(2) .verification-metric-card::before {
+    background: var(--secondary);
+}
+
+.verification-metrics-grid > div:nth-child(3) .verification-metric-card::before {
+    background: #3b82c4;
+}
+
+.verification-metrics-grid > div:nth-child(4) .verification-metric-card::before {
+    background: #d58a24;
+}
+
+.verification-metric-card .card-body {
+    padding: 1.25rem 1.35rem !important;
+}
+
+.verification-metric-card small {
+    margin-bottom: .35rem;
+    color: var(--muted) !important;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.verification-metric-card h3 {
+    color: var(--text);
+    font-size: 1.65rem;
+}
+
+.verification-detail-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: .4rem;
+    overflow-x: auto;
+    padding: .45rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    scrollbar-width: thin;
+}
+
+.verification-detail-tabs .nav-item {
+    flex: 0 0 auto;
+}
+
+.verification-detail-tabs .nav-link {
+    border: 0;
+    padding: .7rem 1rem;
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.verification-detail-tabs .nav-link:hover {
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+}
+
+.verification-detail-tabs .nav-link.active {
+    color: #fff;
+    background: var(--primary);
+}
+
+.verification-detail-panel .card-body {
+    padding: 1.25rem !important;
+}
+
+.verification-detail-panel .table {
+    margin-bottom: 0;
+}
+
+.verification-detail-panel .table thead th {
+    padding: .8rem .75rem;
+    border-bottom-color: var(--border);
+    color: var(--muted);
+    background: var(--surface-soft);
+    font-size: .7rem;
+    letter-spacing: .035em;
+    text-transform: uppercase;
+}
+
+.verification-detail-panel .table tbody td {
+    padding: .8rem .75rem;
+    border-color: var(--border);
+    vertical-align: middle;
+}
+
+@media (max-width: 991.98px) {
+    .verification-badge-card .col-lg-4 {
+        text-align: left !important;
+    }
+
+    .verification-badge-card form {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .verification-detail-page {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .verification-badge-card .card-body,
+    .verification-detail-panel .card-body {
+        padding: 1rem !important;
+    }
+
+    .verification-badge-card .btn {
+        width: 100%;
+    }
+
+    .verification-metric-card .card-body {
+        padding: 1rem 1.1rem !important;
+    }
+
+    .verification-detail-tabs {
+        border-radius: 1rem;
+    }
+}

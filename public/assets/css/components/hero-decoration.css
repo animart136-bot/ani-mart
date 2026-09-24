@@ -1,0 +1,351 @@
+/* Keep the decorative accent consistent across every page-level hero. */
+.shared-page-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    min-height: clamp(16rem, 28vw, 24rem);
+    margin-bottom: clamp(1.5rem, 3vw, 3rem);
+    padding: clamp(2rem, 5vw, 5rem);
+    border-radius: 1.75rem;
+    color: #fff;
+    background: linear-gradient(120deg, #12633e 0%, #1d8657 68%, #277f72 100%);
+    box-shadow: 0 1.25rem 3rem rgba(21, 89, 58, 0.14);
+}
+
+.shared-page-hero__copy {
+    position: relative;
+    z-index: 1;
+    max-width: 54rem;
+}
+
+.shared-page-hero .hero-title {
+    margin: 1rem 0 .75rem;
+    color: inherit;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.shared-page-hero .hero-subtitle {
+    max-width: 48rem;
+    margin: 0;
+    color: rgba(255, 255, 255, .84);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.65;
+}
+
+.shared-page-hero__aside {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.shared-page-hero__stat {
+    min-width: 9rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, .28);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, .12);
+    text-align: center;
+    backdrop-filter: blur(.35rem);
+}
+
+.shared-page-hero__stat span,
+.shared-page-hero__stat strong {
+    display: block;
+}
+
+.shared-page-hero__stat strong {
+    margin-top: .25rem;
+    font-size: 1.5rem;
+}
+
+.shared-page-hero__back {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.25rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.shared-page-hero__back:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+:is(
+    .hero,
+    .hero-section,
+    .landing-hero,
+    .admin-hero,
+    .admin-page-hero,
+    .dashboard-hero,
+    .marketplace-hero,
+    .analytics-hero,
+    .complaints-hero,
+    .inventory-hero,
+    .policy-hero,
+    .price-reference-hero,
+    .product-create-hero,
+    .report-page-hero,
+    .review-edit-hero,
+    .shop-customize-hero,
+    .farm-editor-hero,
+    .farm-public-hero,
+    .seller-hero
+) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+:is(
+    .hero,
+    .hero-section,
+    .landing-hero,
+    .admin-hero,
+    .admin-page-hero,
+    .dashboard-hero,
+    .marketplace-hero,
+    .analytics-hero,
+    .complaints-hero,
+    .inventory-hero,
+    .policy-hero,
+    .price-reference-hero,
+    .product-create-hero,
+    .report-page-hero,
+    .review-edit-hero,
+    .shop-customize-hero,
+    .farm-editor-hero,
+    .farm-public-hero,
+    .seller-hero
+)::after {
+    position: absolute;
+    z-index: -1;
+    right: -4rem;
+    bottom: -7rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    content: "";
+}
+
+/* Keep page heroes compact and readable on phones, regardless of page CSS. */
+@media (max-width: 767.98px) {
+    .shared-page-hero {
+        display: block;
+        min-height: 0 !important;
+        padding: 1.5rem 1.25rem !important;
+        border-radius: 1.25rem !important;
+    }
+
+    .shared-page-hero .hero-title {
+        margin-top: .75rem;
+        font-size: clamp(1.75rem, 9vw, 2.5rem) !important;
+    }
+
+    .shared-page-hero__aside {
+        justify-content: flex-start;
+        margin-top: 1.25rem;
+    }
+
+    .shared-page-hero__stat {
+        min-width: 7.5rem;
+        padding: .75rem 1rem;
+    }
+
+    :is(
+        .hero,
+        .hero-section,
+        .admin-hero,
+        .admin-page-hero,
+        .dashboard-hero,
+        .marketplace-hero,
+        .analytics-hero,
+        .complaints-hero,
+        .inventory-hero,
+        .policy-hero,
+        .price-reference-hero,
+        .product-create-hero,
+        .report-page-hero,
+        .review-edit-hero,
+        .shop-customize-hero,
+        .shop-create-hero,
+        .farm-editor-hero,
+        .community-edit-hero,
+        .community-reports-hero,
+        .farmer-complaints-hero,
+        .messages-hero,
+        .verification-detail-hero
+    ) {
+        min-height: 0 !important;
+        margin-bottom: 1.5rem !important;
+        padding: 1.5rem 1.25rem !important;
+        border-radius: 1.25rem !important;
+    }
+
+    :is(
+        .hero,
+        .hero-section,
+        .landing-hero,
+        .admin-hero,
+        .admin-page-hero,
+        .dashboard-hero,
+        .marketplace-hero,
+        .analytics-hero,
+        .complaints-hero,
+        .inventory-hero,
+        .policy-hero,
+        .price-reference-hero,
+        .product-create-hero,
+        .report-page-hero,
+        .review-edit-hero,
+        .shop-customize-hero,
+        .shop-create-hero,
+        .farm-editor-hero,
+        .farm-public-hero,
+        .community-edit-hero,
+        .community-reports-hero,
+        .farmer-complaints-hero,
+        .messages-hero,
+        .verification-detail-hero,
+        .seller-hero
+    ) :is(.hero-title, h1) {
+        font-size: clamp(1.65rem, 7.5vw, 2rem) !important;
+        line-height: 1.08 !important;
+        letter-spacing: -.035em !important;
+    }
+
+    :is(
+        .hero,
+        .hero-section,
+        .landing-hero,
+        .admin-hero,
+        .admin-page-hero,
+        .dashboard-hero,
+        .marketplace-hero,
+        .analytics-hero,
+        .complaints-hero,
+        .inventory-hero,
+        .policy-hero,
+        .price-reference-hero,
+        .product-create-hero,
+        .report-page-hero,
+        .review-edit-hero,
+        .shop-customize-hero,
+        .shop-create-hero,
+        .farm-editor-hero,
+        .farm-public-hero,
+        .community-edit-hero,
+        .community-reports-hero,
+        .farmer-complaints-hero,
+        .messages-hero,
+        .verification-detail-hero,
+        .seller-hero
+    ) :is(.hero-subtitle, p) {
+        font-size: .9rem !important;
+        line-height: 1.5 !important;
+    }
+
+    :is(
+        .hero,
+        .hero-section,
+        .admin-hero,
+        .admin-page-hero,
+        .dashboard-hero,
+        .marketplace-hero,
+        .analytics-hero,
+        .complaints-hero,
+        .inventory-hero,
+        .policy-hero,
+        .price-reference-hero,
+        .product-create-hero,
+        .report-page-hero,
+        .review-edit-hero,
+        .shop-customize-hero,
+        .shop-create-hero,
+        .farm-editor-hero,
+        .farm-public-hero,
+        .community-edit-hero,
+        .community-reports-hero,
+        .farmer-complaints-hero,
+        .messages-hero,
+        .verification-detail-hero
+    )::after {
+        right: -3.5rem;
+        bottom: -5rem;
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .landing-hero .min-vh-100 {
+        min-height: 0 !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem !important;
+    }
+
+    .landing-hero .hero-image,
+    .marketplace-hero-image {
+        height: 200px !important;
+        margin-top: 1.25rem !important;
+    }
+
+    .seller-hero {
+        min-height: 0 !important;
+        margin-bottom: 1.5rem !important;
+        border-radius: 1.25rem !important;
+    }
+
+    .seller-hero-content,
+    .analytics-hero-content,
+    .farm-public-hero-content {
+        min-height: 0 !important;
+        padding: 1.5rem 1.25rem !important;
+    }
+
+    .farm-public-hero {
+        min-height: 240px !important;
+        margin-bottom: 1.5rem !important;
+        border-radius: 1.25rem !important;
+    }
+}
+
+@media (max-width: 420px) {
+    :is(
+        .hero,
+        .hero-section,
+        .landing-hero,
+        .admin-hero,
+        .admin-page-hero,
+        .dashboard-hero,
+        .marketplace-hero,
+        .analytics-hero,
+        .complaints-hero,
+        .inventory-hero,
+        .policy-hero,
+        .price-reference-hero,
+        .product-create-hero,
+        .report-page-hero,
+        .review-edit-hero,
+        .shop-customize-hero,
+        .shop-create-hero,
+        .farm-editor-hero,
+        .farm-public-hero,
+        .community-edit-hero,
+        .community-reports-hero,
+        .farmer-complaints-hero,
+        .messages-hero,
+        .verification-detail-hero,
+        .seller-hero
+    ) :is(.hero-title, h1) {
+        font-size: 1.55rem !important;
+    }
+}

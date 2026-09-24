@@ -1,0 +1,1 @@
+-- Government ID uploads are no longer part of farmer applications.

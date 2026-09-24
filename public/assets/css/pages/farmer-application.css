@@ -1,0 +1,123 @@
+body{
+    background:#f5f7fb;
+}
+
+/* FORM CARD */
+
+.application-card{
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:50px;
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.06);
+}
+
+.application-profile-thumb{
+    width:72px;
+    height:72px;
+    flex:0 0 72px;
+    border-radius:18px;
+    object-fit:contain;
+    background:white;
+}
+
+/* INPUTS */
+
+.modern-input{
+    border:1px solid var(--primary-dark);
+    background:#f7f8fc;
+    border-radius: var(--radius-lg);
+    padding:15px 20px;
+    min-height:55px;
+}
+
+#farmer-application-form .modern-input:focus{
+    border-color:#198754;
+    box-shadow:0 0 0 .2rem rgba(25,135,84,.2);
+    background:white;
+}
+
+/* PREVIEW */
+
+.preview-card{
+    position: static;
+    top: auto;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.06);
+}
+
+.preview-banner{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    background:#f7f8fc;
+}
+
+.seller-profile-image-preview{
+    position:relative;
+    min-height:300px;
+    background:#f7f8fc;
+}
+
+.seller-profile-image-preview img{
+    display:block;
+    width:100%;
+}
+
+.seller-profile-image-placeholder{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    color:white;
+    background:linear-gradient(135deg, rgba(25,135,84,.88), rgba(13,110,253,.72));
+    font-weight:600;
+    font-size:1rem;
+}
+
+.seller-profile-image-placeholder i{
+    font-size:2rem;
+}
+
+.seller-profile-image-preview.has-image .seller-profile-image-placeholder{
+    display:none;
+}
+
+.preview-content{
+    padding:30px;
+}
+
+.preview-description{
+    text-align:justify;
+    line-height:1.65;
+}
+
+/* STATS */
+
+.mini-stat{
+    text-align:center;
+    background:#f8f9fa;
+    border-radius:18px;
+    padding:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .application-card{
+        padding:30px;
+    }
+
+    .preview-banner{
+        height:220px;
+    }
+
+}

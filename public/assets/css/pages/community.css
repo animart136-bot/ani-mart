@@ -1,0 +1,115 @@
+/* Ani-Mart Community Page Styles
+   Page-specific styling for community pages, posts, and discussions.
+   Inherits global variables and components from app.css.
+*/
+
+/* ========================================= */
+/* COMMUNITY GENERAL STYLES                 */
+/* ========================================= */
+
+.community-feed-comment-actions {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    color: var(--bs-secondary-color);
+    font-size: .78rem;
+}
+
+.community-shared-source {
+    border: 1px solid #dfe8e2;
+    background: #f7faf8;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+
+.community-shared-source:hover {
+    border-color: #9fcab0;
+    background: #f0f8f3;
+}
+
+.community-trending-item {
+    border: 1px solid rgba(var(--bs-success-rgb), .14);
+    background: rgba(var(--bs-success-rgb), .035);
+    transition: border-color .2s ease, background-color .2s ease, transform .2s ease;
+}
+
+.community-trending-item:hover {
+    border-color: rgba(var(--bs-success-rgb), .35);
+    background: rgba(var(--bs-success-rgb), .075);
+    transform: translateY(-1px);
+}
+
+/* Keep feed media compact so a single post image does not fill the viewport. */
+.community-feed-page .community-gallery-carousel {
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #f4f7f2;
+}
+
+.community-feed-page .community-gallery-carousel .carousel-item {
+    height: clamp(280px, 36vw, 480px);
+    min-height: 0;
+}
+
+.community-feed-page .community-gallery-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.community-feed-comment-actions button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    padding: .1rem 0;
+}
+
+.community-feed-comment-actions button:hover,
+.community-feed-comment-actions .is-liked {
+    color: var(--bs-success);
+}
+
+.community-inline-reply-form {
+    max-width: 44rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(var(--bs-success-rgb), .2);
+}
+
+.community-post-owner-actions {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.community-post-owner-actions form {
+    margin: 0;
+}
+
+@media (max-width: 575.98px) {
+    .community-post-owner-actions {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .community-post-owner-actions .btn,
+    .community-post-owner-actions form,
+    .community-post-owner-actions form .btn {
+        flex: 1 1 0;
+        width: 100%;
+    }
+
+    .community-feed-page .community-gallery-carousel .carousel-item {
+        height: clamp(220px, 72vw, 340px);
+    }
+
+    .community-inline-reply-form .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .community-inline-reply-form input {
+        flex-basis: 100%;
+    }
+}

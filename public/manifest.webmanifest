@@ -1,0 +1,24 @@
+{
+  "name": "Ani-Mart Local Farm Marketplace",
+  "short_name": "Ani-Mart",
+  "description": "Buy fresh agricultural products directly from verified local farmers.",
+  "start_url": "/ani-mart/public/marketplace",
+  "scope": "/ani-mart/public/",
+  "display": "standalone",
+  "background_color": "#f7faf7",
+  "theme_color": "#1f7a4d",
+  "icons": [
+    {
+      "src": "/ani-mart/public/assets/img/ani-mart-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/ani-mart/public/assets/img/ani-mart-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

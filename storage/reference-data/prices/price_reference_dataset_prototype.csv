@@ -1,0 +1,37 @@
+commodity,category,variety,unit,region,province,municipality,market,reference_price,minimum_price,maximum_price,price_date,source,source_url,dataset_version
+Tomato,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,115.00,95.00,135.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Eggplant,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,85.00,70.00,100.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Banana,Fruits,Saba,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,72.00,60.00,90.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Chicken,Eggs and poultry,Native,piece,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,12.00,10.00,15.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Ampalaya,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,110.00,90.00,130.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Bitter Melon,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,110.00,90.00,130.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Squash,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,65.00,50.00,80.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Okra,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,95.00,75.00,115.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+String Beans,Vegetables,Baguio beans,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,105.00,85.00,125.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Cucumber,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,80.00,65.00,100.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Carrot,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,120.00,100.00,145.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Cabbage,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,105.00,85.00,125.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Pechay,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,75.00,60.00,90.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Kangkong,Vegetables,Fresh,bundle,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,25.00,20.00,30.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Sweet Potato,Root Crops,Camote,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,55.00,45.00,70.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Cassava,Root Crops,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,45.00,35.00,60.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Ginger,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,180.00,150.00,220.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Garlic,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,190.00,160.00,230.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Onion,Vegetables,Red,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,150.00,125.00,180.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Green Pepper,Vegetables,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,140.00,110.00,165.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Mango,Fruits,Carabao,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,120.00,95.00,150.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Papaya,Fruits,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,75.00,60.00,90.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Pineapple,Fruits,Fresh,piece,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,85.00,65.00,100.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Watermelon,Fruits,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,70.00,55.00,90.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Calamansi,Fruits,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,130.00,100.00,160.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Coconut,Fruits,Young, piece,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,35.00,25.00,45.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Guava,Fruits,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,90.00,70.00,110.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Jackfruit,Fruits,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,80.00,60.00,100.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Pork,Meat,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,360.00,330.00,390.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Beef,Meat,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,420.00,380.00,460.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Chicken,Meat,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,220.00,200.00,240.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Eggs,Eggs and poultry,Chicken eggs,dozen,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,110.00,95.00,125.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Tilapia,Fish,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,180.00,160.00,200.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Milkfish,Fish,Bangus,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,220.00,190.00,250.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Sardines,Fish,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,160.00,140.00,180.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01
+Squid,Fish,Fresh,kg,Eastern Visayas,Southern Leyte,Saint Bernard,Saint Bernard Public Market,280.00,240.00,320.00,2026-08-23,Prototype Reference Dataset,,2026-08-prototype-01

@@ -1,0 +1,39 @@
+# BLOCK .env ACCESS
+<Files ".env">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</Files>
+
+# BLOCK STORAGE AND VENDOR FROM PUBLIC ACCESS
+RedirectMatch 403 ^/storage/.*$
+RedirectMatch 403 ^/vendor/.*$
+RedirectMatch 403 ^/node_modules/.*$
+RedirectMatch 403 ^/composer\.(json|lock)$
+RedirectMatch 403 ^/.*\.sql$
+RedirectMatch 403 ^/database/.*$
+RedirectMatch 403 ^/tests/.*$
+RedirectMatch 403 ^/tools/.*$
+RedirectMatch 403 ^/\.env\.example$
+
+# Prevent accidental access to git metadata
+RedirectMatch 403 ^/\.git/.*$
+
+# InfinityFree serves htdocs directly and does not allow changing the document
+# root. Keep application code outside the public request path by routing every
+# non-sensitive request through the public directory.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Preserve older local URLs embedded in static JavaScript and manifests.
+    RewriteRule ^ani-mart/public(?:/(.*))?$ public/$1 [QSA,L]
+
+    # Stop per-directory rewriting after a request has entered public/.
+    RewriteRule ^public(?:/.*)?$ - [L]
+
+    RewriteRule ^(.*)$ public/$1 [QSA,L]
+</IfModule>

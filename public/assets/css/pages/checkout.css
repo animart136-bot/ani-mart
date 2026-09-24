@@ -1,0 +1,188 @@
+/*
+ * Ani-Mart Checkout Page Styles
+ *
+ * Page-specific styling for checkout and order confirmation pages.
+ * Inherits global variables and components from app.css.
+ */
+
+
+/* =========================================================
+   CHECKOUT CARDS
+   ========================================================= */
+
+.checkout-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 35px;
+    box-shadow: 0 6px 18px rgba(14, 30, 37, 0.06);
+}
+
+.checkout-summary {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(14, 30, 37, 0.06);
+}
+
+
+/* =========================================================
+   CHECKOUT ITEMS
+   ========================================================= */
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.checkout-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.checkout-image {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   EMPTY CHECKOUT STATE
+   ========================================================= */
+
+.empty-cart {
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
+
+.form-control.form-control-sm {
+    border-radius: var(--radius-md);
+    padding: 0.6rem 0.75rem;
+}
+
+.btn-outline-success {
+    border-radius: 999px;
+}
+
+
+/* =========================================================
+   MODALS
+   ========================================================= */
+
+.modal-content {
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   MAP ELEMENTS
+   ========================================================= */
+
+#mapPreview {
+    height: 180px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #f5f5f5;
+    min-height: 180px;
+}
+
+#mapContainer {
+    width: 100%;
+    height: 480px;
+    min-height: 180px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BARANGAY LIST
+   ========================================================= */
+
+#barangayList {
+    max-height: 380px;
+    overflow: auto;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background: #f8fdf6;
+}
+
+
+/* =========================================================
+   PAYMENT METHOD
+   ========================================================= */
+
+.payment-method-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+}
+
+.payment-method-card > i {
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE CHECKOUT
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .checkout-summary {
+        position: static !important;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .checkout-card {
+        padding: 24px;
+    }
+
+    .checkout-item {
+        gap: 12px;
+    }
+
+    .checkout-image {
+        width: 70px;
+        height: 70px;
+        border-radius: var(--control-radius);
+    }
+
+    .checkout-item .text-success {
+        white-space: nowrap;
+    }
+
+    #mapContainer {
+        height: 420px;
+    }
+
+}

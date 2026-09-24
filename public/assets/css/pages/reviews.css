@@ -1,0 +1,146 @@
+/* Ani-Mart Reviews Page Styles
+   Page-specific styling for product and seller reviews pages.
+   Inherits global variables and components from app.css.
+*/
+
+/* ========================================= */
+/* REVIEWS PAGE GENERAL STYLES              */
+/* ========================================= */
+
+/* =========================================
+   REVIEW CARD
+========================================= */
+
+.review-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(20, 50, 35, 0.08);
+}
+
+.review-card-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  transition: max-height 0.35s ease, opacity 0.2s ease, margin-top 0.2s ease, visibility 0.2s ease;
+  margin-top: 0;
+}
+
+.review-card.is-expanded .review-card-content {
+  max-height: 1200px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  margin-top: 0.75rem;
+}
+
+.review-product-image,
+.review-product-placeholder {
+  width: 76px;
+  height: 76px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  object-position: center;
+  flex: 0 0 76px;
+}
+
+.review-product-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f3df;
+  color: #2f7d32;
+  font-size: 1.5rem;
+}
+
+.review-rating {
+  color: #f59f00;
+}
+
+.review-rating strong {
+  color: #26352d;
+}
+
+.review-details {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.review-comment {
+  color: #294033;
+  line-height: 1.6;
+}
+
+.review-evidence {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.75rem;
+}
+
+.review-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #dfeae3;
+  border-radius: 999px;
+  background: #f5faf4;
+  color: #1f5f3e;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.review-toggle-btn:hover {
+  background: #edf8f0;
+}
+
+.review-toggle-btn i {
+  transition: transform 0.2s ease;
+}
+
+.review-card.is-expanded .review-toggle-btn i {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 575.98px) {
+  .row.g-4 {
+    --bs-gutter-x: 0.75rem;
+    --bs-gutter-y: 0.75rem;
+  }
+
+  .review-card {
+    padding: 1rem;
+  }
+
+  .review-product-image,
+  .review-product-placeholder {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .review-card-content {
+    max-height: 0;
+  }
+
+  .review-card.is-expanded .review-card-content {
+    max-height: 1000px;
+  }
+
+  .review-toggle-btn {
+    margin-top: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}

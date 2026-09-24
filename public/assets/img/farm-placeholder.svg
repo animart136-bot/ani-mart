@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title description">
+  <title id="title">Ani-Mart farm banner placeholder</title>
+  <desc id="description">Green farm fields, hills, and a barn beneath a warm sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff3e7"/>
+      <stop offset="1" stop-color="#fff3cf"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4c956c"/>
+      <stop offset="1" stop-color="#1f6f45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#sky)"/>
+  <circle cx="980" cy="105" r="55" fill="#f4c95d" opacity=".85"/>
+  <path d="M0 285Q190 145 390 280T790 260T1200 245V500H0z" fill="#87b77b"/>
+  <path d="M0 340Q250 220 490 330T930 315T1200 300V500H0z" fill="url(#field)"/>
+  <path d="M0 455l390-126M180 500l330-171M470 500l170-171M750 500L715 329M1040 500L790 329M1200 435L850 329" fill="none" stroke="#b8d98f" stroke-width="12" opacity=".7"/>
+  <path d="M365 263l105-82 105 82v128H365z" fill="#f8f3e7"/>
+  <path d="M335 270l135-106 135 106" fill="none" stroke="#a84f3d" stroke-width="28" stroke-linejoin="round"/>
+  <rect x="435" y="305" width="70" height="86" rx="3" fill="#a96835"/>
+  <rect x="386" y="292" width="34" height="34" fill="#7db7d5"/>
+  <rect x="520" y="292" width="34" height="34" fill="#7db7d5"/>
+  <text x="72" y="94" font-family="Arial, sans-serif" font-size="37" font-weight="700" fill="#185b39">Your farm story starts here</text>
+  <text x="74" y="133" font-family="Arial, sans-serif" font-size="21" fill="#3f6f55">Add a banner to welcome customers to your shop.</text>
+</svg>

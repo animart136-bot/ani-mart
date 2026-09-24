@@ -1,0 +1,248 @@
+.farm-editor-hero {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+    border-radius: 26px;
+    box-shadow: var(--shadow-md);
+}
+
+.farm-editor-hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(255, 255, 255, 0.08);
+    filter: saturate(1.05) brightness(0.88);
+}
+
+.farm-editor-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(20, 36, 20, 0.08), rgba(10, 19, 10, 0.82));
+}
+
+.farm-editor-hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.farm-editor-logo {
+    width: 94px;
+    height: 94px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary);
+    font-size: 2.4rem;
+    font-weight: 800;
+    border: 1px solid rgba(45, 125, 55, 0.18);
+    overflow: hidden;
+}
+
+.farm-editor-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.farm-editor-banner {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.farm-banner-edit,
+.image-edit-overlay {
+    position: absolute;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    backdrop-filter: blur(6px);
+}
+
+.farm-banner-edit {
+    bottom: 18px;
+    left: 18px;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+}
+
+.image-edit-overlay {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.farm-gallery-item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.farm-editor-hero-text {
+    color: #fff;
+}
+
+.farm-editor-hero-text h2 {
+    font-size: clamp(1.8rem, 2.3vw, 2.6rem);
+    margin-bottom: 0.35rem;
+}
+
+.farm-editor-hero-text p {
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.profile-panel {
+    padding: 32px;
+}
+
+.profile-save-btn {
+    width: 100%;
+    max-width: 260px;
+}
+
+.gallery-upload-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.image-upload-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(219, 234, 212, 0.95);
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 18px 42px rgba(34, 83, 40, 0.08);
+}
+
+.upload-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.upload-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(46, 125, 50, 0.12);
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.image-upload-card .form-control {
+    min-height: auto;
+    padding: 0.95rem 1.05rem;
+}
+
+.farm-gallery-item {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #f6faf2;
+    border: 1px solid rgba(222, 238, 216, 0.95);
+}
+
+.farm-gallery-item > button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.55rem 0.72rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(209, 229, 196, 0.95);
+}
+
+.farm-gallery-empty {
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(174, 205, 154, 0.9);
+    border-radius: 18px;
+    color: var(--muted);
+    background: rgba(247, 251, 244, 0.9);
+}
+
+.farm-metric-list {
+    display: grid;
+    gap: 12px;
+}
+
+.farm-metric-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    border-radius: 22px;
+    background: rgba(242, 249, 240, 0.92);
+    border: 1px solid rgba(218, 240, 213, 0.95);
+}
+
+.farm-metric-list span {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.farm-metric-list strong {
+    color: var(--text);
+}
+
+    .farm-editor-hero {
+        position: relative;
+    }
+
+    .farm-banner-edit,
+    .image-edit-overlay {
+        cursor: pointer;
+    }
+
+    .farm-banner-edit:hover,
+    .image-edit-overlay:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+
+
+    .farm-editor-hero-overlay {
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .farm-editor-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .farm-editor-logo {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+    }
+}

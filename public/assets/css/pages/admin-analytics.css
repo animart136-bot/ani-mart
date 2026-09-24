@@ -1,0 +1,425 @@
+/* Admin analytics uses Ani-Mart's shared application tokens. */
+
+body.admin-analytics-page {
+    color: var(--text);
+    background:
+        radial-gradient(circle at 93% 2%, color-mix(in srgb, var(--primary-light) 13%, transparent), transparent 27rem),
+        var(--bg);
+}
+
+.admin-analytics-shell {
+    max-width: 1420px;
+}
+
+.analytics-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 350px);
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    min-height: 255px;
+    overflow: hidden;
+    padding: clamp(1.5rem, 4vw, 2.8rem);
+    border: 1px solid color-mix(in srgb, var(--primary-light) 32%, var(--primary-dark));
+    border-radius: var(--radius-detail);
+    color: var(--surface);
+    background:
+        radial-gradient(circle at 90% 8%, color-mix(in srgb, var(--surface) 16%, transparent), transparent 17rem),
+        radial-gradient(circle at 4% 112%, color-mix(in srgb, var(--secondary) 42%, transparent), transparent 20rem),
+        linear-gradient(120deg, var(--primary-dark), var(--primary) 64%, var(--secondary));
+    box-shadow: 0 22px 52px color-mix(in srgb, var(--primary-dark) 23%, transparent);
+}
+
+.analytics-hero-copy,
+.analytics-hero-summary {
+    position: relative;
+    z-index: 1;
+}
+
+.analytics-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .48rem .78rem;
+    border: 1px solid color-mix(in srgb, var(--surface) 24%, transparent);
+    border-radius: 999px;
+    color: color-mix(in srgb, var(--surface) 86%, var(--primary-light));
+    background: color-mix(in srgb, var(--surface) 11%, transparent);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.analytics-hero h1 {
+    margin: .9rem 0 .65rem;
+    color: var(--surface);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1.06;
+}
+
+.analytics-hero-copy > p {
+    max-width: 680px;
+    margin: 0;
+    color: color-mix(in srgb, var(--surface) 82%, var(--primary-light));
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.analytics-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.15rem;
+    padding: .65rem .95rem;
+    border: 1px solid color-mix(in srgb, var(--surface) 32%, transparent);
+    border-radius: var(--control-radius);
+    color: var(--surface);
+    background: color-mix(in srgb, var(--surface) 11%, transparent);
+    font-size: .84rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.analytics-back-link:hover {
+    color: var(--primary-dark);
+    background: var(--surface);
+    transform: translateY(-1px);
+}
+
+.analytics-hero-summary {
+    padding: 1.35rem;
+    border: 1px solid color-mix(in srgb, var(--surface) 27%, transparent);
+    border-radius: var(--radius-xl);
+    background: color-mix(in srgb, var(--surface) 13%, transparent);
+    box-shadow: inset 0 1px color-mix(in srgb, var(--surface) 18%, transparent);
+    backdrop-filter: blur(10px);
+}
+
+.analytics-hero-summary > span {
+    color: color-mix(in srgb, var(--surface) 78%, var(--primary-light));
+    font-size: .86rem;
+    font-weight: 700;
+}
+
+.analytics-hero-summary > strong {
+    display: block;
+    margin: .3rem 0 .8rem;
+    color: var(--surface);
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1;
+}
+
+.analytics-hero-summary > strong small {
+    font-size: .9rem;
+    font-weight: 650;
+    opacity: .72;
+}
+
+.analytics-health-track {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 18%, transparent);
+}
+
+.analytics-health-track i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--surface);
+}
+
+.analytics-hero-summary > p {
+    margin: .7rem 0 0;
+    color: color-mix(in srgb, var(--surface) 75%, var(--primary-light));
+    font-size: .78rem;
+}
+
+.analytics-section-title {
+    margin-bottom: 1rem;
+}
+
+.analytics-section-block {
+    margin-top: 1.75rem;
+}
+
+.analytics-section-title span {
+    color: var(--primary);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.analytics-section-title h2 {
+    margin: .12rem 0 0;
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.admin-analytics-page .admin-stat-card,
+.admin-analytics-page .analytics-card {
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-xl) !important;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.admin-analytics-page .admin-stat-card {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-items: center;
+    gap: .9rem;
+    min-height: 118px;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.admin-analytics-page .admin-stat-card h2 {
+    margin-top: .18rem;
+    color: var(--text);
+    font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+}
+
+.admin-analytics-page .admin-stat-card small {
+    font-size: .82rem;
+}
+
+.admin-analytics-page .stat-icon {
+    flex: 0 0 auto;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .9rem;
+    font-size: 1.2rem;
+}
+
+.admin-analytics-page .analytics-card .card-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.35rem !important;
+    color: var(--text);
+}
+
+.admin-analytics-page .analytics-card {
+    overflow: hidden;
+}
+
+.admin-analytics-page .analytics-card h4,
+.admin-analytics-page .analytics-card h5,
+.admin-analytics-page .analytics-card h6 {
+    color: var(--text);
+}
+
+.admin-analytics-page .analytics-card .card-body > h4,
+.admin-analytics-page .analytics-card .card-body > h5 {
+    margin-bottom: 1rem !important;
+    padding-bottom: .85rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.admin-analytics-page .analytics-card .d-flex.justify-content-between {
+    align-items: center;
+    gap: 1rem;
+    min-height: 44px;
+}
+
+.admin-analytics-page .analytics-card .d-flex.justify-content-between > span:first-child {
+    min-width: 0;
+    color: var(--muted);
+    line-height: 1.35;
+}
+
+.admin-analytics-page .analytics-card .d-flex.justify-content-between > strong,
+.admin-analytics-page .analytics-card .d-flex.justify-content-between > span:last-child {
+    flex: 0 0 auto;
+}
+
+.admin-analytics-page .analytics-card .border-bottom,
+.analytics-list-row {
+    border-color: var(--border) !important;
+}
+
+.analytics-breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+    margin: 0;
+}
+
+.analytics-breakdown-grid > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface-soft);
+}
+
+.analytics-breakdown-grid h6 {
+    margin-bottom: .45rem;
+    font-size: .82rem;
+    line-height: 1.35;
+}
+
+.analytics-breakdown-grid .d-flex,
+.analytics-breakdown-grid .analytics-list-row {
+    font-size: .82rem;
+}
+
+.analytics-breakdown-grid .d-flex > span:first-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analytics-chart-grid > [class*="col-"] {
+    display: flex;
+}
+
+.analytics-chart-grid .analytics-card {
+    width: 100%;
+}
+
+.analytics-risk-row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.analytics-chart-card canvas {
+    max-height: 260px;
+}
+
+.analytics-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 43px;
+    padding: .55rem 0;
+    border-bottom: 1px solid;
+}
+
+.analytics-list-row:last-child {
+    border-bottom: 0;
+}
+
+.analytics-person-name {
+    min-width: 0;
+    overflow: hidden;
+    color: var(--text) !important;
+    font-size: .82rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analytics-collapsible-row[hidden] {
+    display: none !important;
+}
+
+.analytics-show-more {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: .45rem;
+    margin-top: .85rem;
+    padding: .5rem .75rem;
+    border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--border));
+    border-radius: 999px;
+    color: var(--primary-dark);
+    background: var(--surface-soft);
+    font-size: .8rem;
+    font-weight: 750;
+    transition: var(--transition);
+}
+
+.analytics-show-more:hover,
+.analytics-show-more:focus-visible {
+    border-color: var(--primary);
+    color: var(--surface);
+    background: var(--primary);
+}
+
+.analytics-show-more-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.55rem;
+    min-height: 1.55rem;
+    padding: 0 .35rem;
+    border-radius: 999px;
+    color: var(--primary-dark);
+    background: color-mix(in srgb, var(--primary-light) 56%, var(--surface));
+    font-size: .72rem;
+}
+
+.analytics-show-more[aria-expanded="true"] .analytics-show-more-count {
+    display: none;
+}
+
+.analytics-show-more .bi {
+    font-size: .72rem;
+    transition: transform .2s ease;
+}
+
+.analytics-show-more[aria-expanded="true"] .bi {
+    transform: rotate(180deg);
+}
+
+.analytics-empty-copy {
+    color: var(--muted);
+    font-size: .86rem;
+}
+
+.admin-analytics-page canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .analytics-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-hero-summary {
+        max-width: 520px;
+    }
+
+    .analytics-risk-row > [class*="col-"] {
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .analytics-hero {
+        min-height: 0;
+        border-radius: var(--radius-xl);
+    }
+
+    .analytics-overview-grid > [class*="col-"] {
+        width: 100%;
+    }
+
+    .admin-analytics-page .admin-stat-card {
+        min-height: 96px;
+    }
+
+    .analytics-breakdown-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-section-block {
+        margin-top: 1.35rem;
+    }
+}
