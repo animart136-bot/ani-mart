@@ -151,16 +151,16 @@
                     <input
                         type="email"
                         name="email"
+                        id="email"
                         class="form-control auth-input <?= isset($errors['email']) ? 'is-invalid' : '' ?>"
                         <?= isset($errors['email']) ? 'aria-invalid="true"' : '' ?>
+                        aria-describedby="emailFeedback"
                         placeholder="Enter email address"
                         value="<?= htmlspecialchars(old('email')) ?>"
                         required>
-                    <?php if (isset($errors['email'])): ?>
-                        <div class="invalid-feedback">
-                            <?= htmlspecialchars($errors['email']) ?>
-                        </div>
-                    <?php endif; ?>
+                    <div class="invalid-feedback" id="emailFeedback">
+                        <?= htmlspecialchars($errors['email'] ?? 'Enter a valid email address, such as name@example.com.') ?>
+                    </div>
 
                 </div>
 
@@ -179,8 +179,11 @@
                             id="password"
                             class="form-control auth-input <?= isset($errors['password']) ? 'is-invalid' : '' ?>"
                             <?= isset($errors['password']) ? 'aria-invalid="true"' : '' ?>
+                            aria-describedby="passwordHelp passwordFeedback"
                             placeholder="At least 8 characters"
                             autocomplete="new-password"
+                            minlength="8"
+                            pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}"
                             required>
                         <button
                             type="button"
@@ -191,11 +194,12 @@
                             <i class="bi bi-eye" aria-hidden="true"></i>
                         </button>
                     </div>
-                    <?php if (isset($errors['password'])): ?>
-                        <div class="invalid-feedback d-block">
-                            <?= htmlspecialchars($errors['password']) ?>
-                        </div>
-                    <?php endif; ?>
+                    <div class="form-text text-white-50" id="passwordHelp">
+                        Use at least 8 characters with at least one letter and one number.
+                    </div>
+                    <div class="invalid-feedback <?= isset($errors['password']) ? 'd-block' : '' ?>" id="passwordFeedback">
+                        <?= htmlspecialchars($errors['password'] ?? 'Password is not strong enough. Use at least 8 characters with a letter and a number.') ?>
+                    </div>
 
                 </div>
 
@@ -253,9 +257,52 @@
     });
 
     const registerForm = document.querySelector('.auth-form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    function validateEmail() {
+        if (!emailInput) {
+            return true;
+        }
+
+        emailInput.setCustomValidity('');
+
+        if (emailInput.validity.valueMissing) {
+            emailInput.setCustomValidity('Enter your email address.');
+        } else if (emailInput.validity.typeMismatch) {
+            emailInput.setCustomValidity('Enter a valid email address, such as name@example.com.');
+        }
+
+        return emailInput.validity.valid;
+    }
+
+    function validatePassword() {
+        if (!passwordInput) {
+            return true;
+        }
+
+        passwordInput.setCustomValidity('');
+
+        if (passwordInput.validity.valueMissing) {
+            passwordInput.setCustomValidity('Enter a password.');
+        } else if (passwordInput.validity.tooShort || passwordInput.validity.patternMismatch) {
+            passwordInput.setCustomValidity('Password is not strong enough. Use at least 8 characters with a letter and a number.');
+        }
+
+        return passwordInput.validity.valid;
+    }
+
+    emailInput?.addEventListener('input', validateEmail);
+    passwordInput?.addEventListener('input', validatePassword);
 
     registerForm?.addEventListener('invalid', function (event) {
         const field = event.target;
+
+        if (field === emailInput) {
+            validateEmail();
+        } else if (field === passwordInput) {
+            validatePassword();
+        }
 
         if (field.classList?.contains('auth-input')) {
             field.classList.add('is-invalid');
