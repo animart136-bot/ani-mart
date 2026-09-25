@@ -292,7 +292,11 @@ class ProfileController extends Controller
         }
 
         if (($profileImage || $removeProfileImage) && $previousProfileImage !== '' && $previousProfileImage !== (string) $profileImage) {
-            (new CloudinaryService())->deleteByUrl($previousProfileImage, false);
+            try {
+                (new CloudinaryService())->deleteByUrl($previousProfileImage, false);
+            } catch (\RuntimeException $exception) {
+                error_log('Ani-Mart profile image cleanup skipped: ' . $exception->getMessage());
+            }
         }
 
         $freshUser =
@@ -493,11 +497,23 @@ class ProfileController extends Controller
             $this->redirect('/ani-mart/public/profile');
         }
 
-        $upload = (new ImageUploadService())->publicField('profile_image', 'profiles', [
-            'entity_type' => 'user_profile',
-            'entity_id' => $userId,
-            'owner_user_id' => $userId,
-        ]);
+        try {
+            $upload = (new ImageUploadService())->publicField('profile_image', 'profiles', [
+                'entity_type' => 'user_profile',
+                'entity_id' => $userId,
+                'owner_user_id' => $userId,
+            ]);
+        } catch (InvalidArgumentException $exception) {
+            Session::flash('error', $exception->getMessage());
+            $this->redirect('/ani-mart/public/profile');
+        } catch (\RuntimeException $exception) {
+            error_log('Ani-Mart profile image upload unavailable: ' . $exception->getMessage());
+            Session::flash(
+                'error',
+                'Profile image uploads are not configured on this server yet. You can save other profile changes without selecting an image.'
+            );
+            $this->redirect('/ani-mart/public/profile');
+        }
         if (!$upload || empty($upload['secure_url'])) {
             Session::flash(
                 'error',
