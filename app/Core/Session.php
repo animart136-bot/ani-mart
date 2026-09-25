@@ -14,6 +14,7 @@ class Session
         if (
             session_status() === PHP_SESSION_NONE
         ) {
+            self::configureStorage();
             self::configureCookieSettings();
             session_start();
         }
@@ -150,6 +151,28 @@ class Session
         ini_set('session.use_only_cookies', '1');
         ini_set('session.cookie_httponly', '1');
         ini_set('session.cookie_samesite', 'Lax');
+    }
+
+    private static function configureStorage(): void
+    {
+        $configuredPath = trim((string) ($_ENV['SESSION_SAVE_PATH'] ?? ''));
+        $root = defined('ANI_MART_ROOT')
+            ? ANI_MART_ROOT
+            : dirname(__DIR__, 2);
+        $path = $configuredPath !== ''
+            ? $configuredPath
+            : $root . '/storage/sessions';
+
+        if (!is_dir($path)) {
+            @mkdir($path, 0700, true);
+        }
+
+        if (is_dir($path) && is_writable($path)) {
+            session_save_path($path);
+            return;
+        }
+
+        error_log('Ani-Mart session storage is unavailable: ' . $path);
     }
 
     private static function shouldUseSecureCookies(): bool
