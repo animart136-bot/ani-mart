@@ -64,7 +64,7 @@ class MessageController extends Controller
             'people' => $this->findMessageableAccounts((int) $user['id'], $peopleSearch),
             'archived' => $archived,
             'bodyClass' => 'messages-page',
-            'pageCss' => '/ani-mart/public/assets/css/pages/message-chat.css'
+            'pageCss' => '/ani-mart/public/assets/css/pages/inbox-ui.css'
         ]);
     }
 

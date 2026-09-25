@@ -3,6 +3,7 @@
 /node_modules/
 /storage/logs/*
 !/storage/logs/.gitkeep
+/storage/sessions/sess_*
 /storage/private/
 /public/uploads/profiles/
 /public/uploads/complaint-evidence/

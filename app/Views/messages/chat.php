@@ -17,7 +17,7 @@ $conversationSettings = $conversationSettings ?? (object) [
     'auto_download_images' => 0,
 ];
 
-$pageStyles[] = '/ani-mart/public/assets/css/pages/message-chat.css?v=' . filemtime(__DIR__ . '/../../../public/assets/css/pages/message-chat.css');
+$pageStyles[] = '/ani-mart/public/assets/css/pages/inbox-ui.css?v=' . filemtime(__DIR__ . '/../../../public/assets/css/pages/inbox-ui.css');
 
 ob_start();
 ?>
